@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates id="template" xml:space="preserve" owl="1">
+    <t t-name="product_qr_code.ProductQrcodeScanner">
+        <t t-set="_activeClasses">border-primary</t>
+        <div style="text-align:center; padding: 10px;">
+            <label t-attf-class="btn btn-{{navClass}} o_sale_apply_barcode"
+                   title="Barcode" for="o_wsale_apply_barcode"
+                   id="barcode-scanner" t-on-click="load_qr">
+                <i class="fa fa-qrcode"/>SCAN
+           </label>
+             <div id="reader" style="width: 100%; max-width: 600px;
+                   margin: 10px auto; border:1px solid #ddd; display: flex; justify-content: center;" t-ref="reader">
+            </div>
+             <div id="result" style="text-align: center; font-size: 1.5rem; margin: 10px auto; padding: 10px;" t-ref="result">
+            </div>
+         </div>
+    </t>
+</templates>

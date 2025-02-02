@@ -1,0 +1,81 @@
+<odoo>
+    <record id="scan_product_qrcode" model="ir.actions.client">
+        <field name="name">Scan Product Qr Code</field>
+        <field name="tag">scan_product_qrcode_client_action</field>
+    </record>
+    <record id="product_qr_code_view_form" model="ir.ui.view">
+        <field name="name">product.qr.code.form</field>
+        <field name="model">product.qr.code</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="%(product_qr_code.scan_product_qrcode)d"
+                    string="Scan Product QR Code"
+                    class="oe_highlight" type="action" icon="fa-qrcode" invisible="state not in ['in']"/>
+
+                    <button string="Generate QR" type="object" name="action_qr" invisible="state not in ['draft']"/>
+                    <button string="Print QR" type="object" name="print_qr" invisible="state not in ['qr','sheet_in_ak']"/>
+                    <button string="IN" type="object" name="action_add" invisible="state not in ['qr']"/>
+                    <button string="OUT" type="object" name="action_remove" invisible="state not in ['scanned']"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft"/>
+                </header>
+                <sheet>
+                    <div>
+                        <div>
+                            <h1>
+                                <field name="id_record"/>
+                            </h1>
+                        </div>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="product_id" required="1" readonly="state in ['out']"/>
+                            <field name="scanned_on" readonly="1"/>
+                            <field name="scanned_by" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="in_date" readonly="1"/>
+                            <field name="out_date" readonly="1"/>
+                            <field name="qr_code_image" widcget="image" options="{'size': [60, 60]}" readonly="1" invisible="1"/>
+                            <field name="file_name" readonly="1" invisible="1"/>
+                       </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_qr_code_view_tree" model="ir.ui.view">
+        <field name="name">product.qr.code.tree</field>
+        <field name="model">product.qr.code</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id_record"/>
+                <field name="product_id"/>
+                <field name="in_date"/>
+                <field name="out_date"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="product_qr_code_action" model="ir.actions.act_window">
+        <field name="name">Product QR</field>
+        <field name="res_model">product.qr.code</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_product_qr_code_root"
+            name="Product QR"
+            web_icon="product_qr_code,static/description/icon.png"
+        />
+
+    <menuitem id="menu_product_qr_code"
+              name="Product QR"
+              action="product_qr_code_action"
+              sequence="1"
+              parent="menu_product_qr_code_root"/>
+
+
+</odoo>
+
