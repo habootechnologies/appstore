@@ -26,7 +26,7 @@
     'price': '1',
     'currency': 'USD',
     'support': 'habootechnologies@gmail.com',
-    'images': ['static/description/b1.png'],
+    'images': ['static/description/banner.png'],
     'application': True,
 
 }
