@@ -39,7 +39,7 @@ class ProductQrCode(models.Model):
         if not self.qr_code_image:
             raise ValidationError("QR Code image not Generated")
 
-        report = self.env.ref('product_qr_code.action_report_product_qr_code')
+        report = self.env.ref('haboo_qr_code.action_report_product_qr_code')
 
         return report.report_action(self, config=False)
 

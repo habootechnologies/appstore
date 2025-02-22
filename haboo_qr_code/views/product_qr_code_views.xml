@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="%(product_qr_code.scan_product_qrcode)d"
+                    <button name="%(haboo_qr_code.scan_product_qrcode)d"
                     string="Scan Product QR Code"
                     class="oe_highlight" type="action" icon="fa-qrcode" invisible="state not in ['in']"/>
 

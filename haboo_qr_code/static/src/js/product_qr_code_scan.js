@@ -85,5 +85,5 @@ export class ProductQrcodeScanner extends Component{
 
 };
 
-ProductQrcodeScanner.template = "product_qr_code.ProductQrcodeScanner";
+ProductQrcodeScanner.template = "haboo_qr_code.ProductQrcodeScanner";
 registry.category("actions").add("scan_product_qrcode_client_action", ProductQrcodeScanner);

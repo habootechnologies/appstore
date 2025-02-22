@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <templates id="template" xml:space="preserve" owl="1">
-    <t t-name="product_qr_code.ProductQrcodeScanner">
+    <t t-name="haboo_qr_code.ProductQrcodeScanner">
         <t t-set="_activeClasses">border-primary</t>
         <div style="text-align:center; padding: 10px;">
             <label t-attf-class="btn btn-{{navClass}} o_sale_apply_barcode"

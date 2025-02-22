@@ -21,13 +21,13 @@
             <field name="name">Product QR Code</field>
             <field name="model">product.qr.code</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">product_qr_code.report_qr_code_template</field>
-            <field name="report_file">product_qr_code.report_qr_code_template</field>
+            <field name="report_name">haboo_qr_code.report_qr_code_template</field>
+            <field name="report_file">haboo_qr_code.report_qr_code_template</field>
             <field name="binding_model_id" ref="model_product_qr_code"/>
             <field name="binding_type">report</field>
         </record>
         <record id="action_report_product_qr_code" model="ir.actions.report">
-            <field name="paperformat_id" ref="product_qr_code.paperformat_product_qr_code_report"/>
+            <field name="paperformat_id" ref="haboo_qr_code.paperformat_product_qr_code_report"/>
         </record>
         <template id="report_qr_code_template">
             <t t-call="web.html_container">
