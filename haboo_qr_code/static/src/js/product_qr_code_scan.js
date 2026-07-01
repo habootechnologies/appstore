@@ -6,7 +6,6 @@ import { Component , useRef, onMounted } from "@odoo/owl";
 
 export class ProductQrcodeScanner extends Component{
     setup() {
-        super.setup();
         this.result = useRef("result");
         this.reader = useRef("reader");
         this.orm = useService("orm");

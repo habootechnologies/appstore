@@ -45,23 +45,23 @@
         </field>
     </record>
 
-    <record id="product_qr_code_view_tree" model="ir.ui.view">
-        <field name="name">product.qr.code.tree</field>
+    <record id="product_qr_code_view_list" model="ir.ui.view">
+        <field name="name">product.qr.code.list</field>
         <field name="model">product.qr.code</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="id_record"/>
                 <field name="product_id"/>
                 <field name="in_date"/>
                 <field name="out_date"/>
-            </tree>
+            </list>
         </field>
     </record>
 
      <record id="product_qr_code_action" model="ir.actions.act_window">
         <field name="name">Product QR</field>
         <field name="res_model">product.qr.code</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem

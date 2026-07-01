@@ -64,22 +64,19 @@ class ProductQrCode(models.Model):
                 record.name = "New"
 
 
-    @api.model
-    def create(self, vals):
-        if not vals.get('product_name') or vals.get('product_name') == 'New':
-            vals['product_name'] = self.env['ir.sequence'].next_by_code('product.qr.code.sequence')
-            
-        if not vals.get('id_record') or vals.get('id_record') == 'New':
-            vals['id_record'] = self.env['ir.sequence'].next_by_code('product.qr.code')
-
-        res = super(ProductQrCode, self).create(vals)
-        if res.product_name:
-            qr_image, filename = self._generate_qr(res.product_name, res.id)
-            res.write({
-                'qr_code_image': qr_image,
-                'file_name': filename
-            })
-        return res
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if not vals.get('product_name') or vals.get('product_name') == 'New':
+                vals['product_name'] = self.env['ir.sequence'].next_by_code('product.qr.code.sequence')
+            if not vals.get('id_record') or vals.get('id_record') == 'New':
+                vals['id_record'] = self.env['ir.sequence'].next_by_code('product.qr.code')
+        records = super().create(vals_list)
+        for rec in records:
+            if rec.product_name:
+                qr_image, filename = self._generate_qr(rec.product_name, rec.id)
+                rec.write({'qr_code_image': qr_image, 'file_name': filename})
+        return records
 
 
     def _generate_qr(self, product_name, record_id):
