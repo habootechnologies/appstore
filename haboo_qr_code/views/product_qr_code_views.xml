@@ -9,14 +9,20 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <!-- Odoo 16/15: dynamic visibility requires attrs domain syntax, not inline Python -->
                     <button name="%(haboo_qr_code.scan_product_qrcode)d"
                     string="Scan Product QR Code"
-                    class="oe_highlight" type="action" icon="fa-qrcode" invisible="state not in ['in']"/>
+                    class="oe_highlight" type="action" icon="fa-qrcode"
+                    attrs="{'invisible': [('state', 'not in', ['in'])]}"/>
 
-                    <button string="Generate QR" type="object" name="action_qr" invisible="state not in ['draft']"/>
-                    <button string="Print QR" type="object" name="print_qr" invisible="state not in ['qr','sheet_in_ak']"/>
-                    <button string="IN" type="object" name="action_add" invisible="state not in ['qr']"/>
-                    <button string="OUT" type="object" name="action_remove" invisible="state not in ['scanned']"/>
+                    <button string="Generate QR" type="object" name="action_qr"
+                    attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
+                    <button string="Print QR" type="object" name="print_qr"
+                    attrs="{'invisible': [('state', 'not in', ['qr', 'sheet_in_ak'])]}"/>
+                    <button string="IN" type="object" name="action_add"
+                    attrs="{'invisible': [('state', 'not in', ['qr'])]}"/>
+                    <button string="OUT" type="object" name="action_remove"
+                    attrs="{'invisible': [('state', 'not in', ['scanned'])]}"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft"/>
                 </header>
                 <sheet>
@@ -29,7 +35,9 @@
                     </div>
                     <group>
                         <group>
-                            <field name="product_id" required="1" readonly="state in ['out']"/>
+                            <!-- dynamic readonly: attrs domain syntax for Odoo 16/15 -->
+                            <field name="product_id" required="1"
+                            attrs="{'readonly': [('state', 'in', ['out'])]}"/>
                             <field name="scanned_on" readonly="1"/>
                             <field name="scanned_by" readonly="1"/>
                         </group>
@@ -78,4 +86,3 @@
 
 
 </odoo>
-
