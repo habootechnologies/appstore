@@ -3,7 +3,7 @@
     'summary': """QR Code Generator and Scanner""",
     'description': """QR Code Generator and Scanner""",
     'author': 'Haboo Technologies Pvt Ltd',
-    'version': '18.0',
+    'version': '19.0',
     'category': 'Inventory',
     'summary': 'Generate and Scan QR codes for Products',
     'depends': ['base', 'product'],

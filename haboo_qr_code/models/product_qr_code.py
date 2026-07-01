@@ -55,7 +55,7 @@ class ProductQrCode(models.Model):
 
 
 
-    @api.depends('name')
+    @api.depends('product_name')
     def _compute_name(self):
         for record in self:
             if record.product_name:
