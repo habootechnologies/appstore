@@ -1,0 +1,29 @@
+.navbar-logo {
+    padding: 15px;
+    color: #fff;
+}
+.navbar-mainbg {
+    background-color: #504e48;
+    padding: 0px;
+}
+#navbarSupportedContent {
+    overflow: hidden;
+    position: relative;
+    height: 45px;
+}
+#navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#navbarSupportedContent li {
+    list-style-type: none;
+    float: left;
+}
+
+@media (max-width: 991px) {
+    #navbarSupportedContent ul li a {
+        padding: 12px 30px;
+    }
+}
+

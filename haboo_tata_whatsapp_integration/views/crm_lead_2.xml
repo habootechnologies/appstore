@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <record id="crm_lead_form_view_inherited_2" model="ir.ui.view">
+            <field name="name">CRM Lead Form View Inherited 2</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="after">
+                    <field name="whatsapp_session2_id" readonly="1" invisible="1"/>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <button name="new_whatsapp_session_2" type="object" class="oe_stat_button" string="Send Whatsapp Message 2" invisible="type != 'opportunity'"/>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="view_whatsapp_session_2" type="object" class="oe_stat_button" string="Whatsapp Session 2" invisible="whatsapp_session2_id == False"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

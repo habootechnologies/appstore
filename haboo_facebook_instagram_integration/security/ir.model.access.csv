@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_provider,access_provider,model_provider,base.group_user,1,1,1,1
+access_messenger_session,access_messenger_session,model_messenger_session,base.group_user,1,1,1,1
+access_messenger_messages,access_messenger_messages,model_messenger_messages,base.group_user,1,1,1,1
+access_opportunity_convert_session_wizard,access_opportunity_convert_session_wizard,model_opportunity_convert_session_wizard,base.group_user,1,1,1,1
+access_existing_opportunity_line,access_existing_opportunity_line,model_existing_opportunity_line,base.group_user,1,1,1,1
+access_post_post_user,post.post user,model_post_post,,1,1,1,0
+access_post_comments_user,post.comments user,model_post_comments,,1,1,1,0
+access_instagram_account_user,instagram.account user,model_instagram_account,,1,1,1,0
+access_instagram_reply_user,access_instagram_reply_user,model_post_comment_reply,,1,1,1,0

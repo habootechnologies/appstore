@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+        <record id="crm_lead__shopify_view_form_inherited" model="ir.ui.view">
+            <field name="name">Crm Lead Shopify Form View Inherited</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='expected_revenue']" position="after">
+                    <label for="shopify_order_no" invisible="not from_conversion_shopify"/>
+                    <div class="o_row" invisible="not from_conversion_shopify">
+                        <field name="shopify_order_no"/>
+                        <button name="update_sale_order" type="object" class="oe_highlight" string="Update"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
