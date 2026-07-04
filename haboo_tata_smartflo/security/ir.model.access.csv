@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cdr_history_user,cdr_history_user,model_cdr_history,base.group_user,1,1,1,1
+access_opportunity_convert_wizard_user,opportunity_convert_wizard_user,model_opportunity_convert_wizard,base.group_user,1,1,1,1
+access_existing_opportunity_line_user,existing_opportunity_line_user,model_existing_opportunity_line,base.group_user,1,1,1,1

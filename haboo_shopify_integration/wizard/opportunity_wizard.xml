@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+        <record id="opportunity_convert_wizard_view_form" model="ir.ui.view">
+            <field name="name">Opportunity Convert Wizard Form View</field>
+            <field name="model">shopify.opportunity.convert.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="conversion_action" widget="radio"/>
+                        </group>
+                        <group name="opportunity_assign" string="Assign this Opportunity to">
+                            <field name="user_id" options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="team_id" options="{'no_create': True, 'no_edit': True}" invisible="1"/>
+                        </group>
+                        <group name="customer_action" string="Customer" col="1">
+                            <field name="partner_action" nolabel="1" widget="radio"/>
+                            <group col="2">
+                                <field name="partner_name" invisible="partner_action != 'create'"/>
+                                <field name="phone" invisible="partner_action != 'create'"/>
+                                <field name="partner_id" invisible="partner_action != 'exist'"/>
+                            </group>
+                        </group>
+                        <field name="opportunity_ids"/>
+<!--                        <label for="existing_opportunities_ids" invisible="partner_id == False"/>-->
+<!--                        <field name="existing_opportunities_ids" nolabel="1" invisible="conversion_action != 'merge'">-->
+<!--                            <list editable="bottom">-->
+<!--                                <field name="opportunity_id" readonly="True"/>-->
+<!--                                <button name="button_link" type="object" class="oe_highlight" string="Link"/>-->
+<!--                            </list>-->
+<!--                        </field>-->
+                    </sheet>
+                    <footer>
+                        <button name="action_create_opportunity" type="object" class="oe_highlight" string="Create Opportunity" invisible="conversion_action == 'merge'"/>
+                        <button name="button_link" type="object" class="oe_highlight" string="Link" invisible="conversion_action == 'convert'"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

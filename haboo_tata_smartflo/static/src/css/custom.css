@@ -1,0 +1,4 @@
+.hide-debug .o_debug_manager,
+.hide-debug .o_debug_mode {
+    display: none !important;
+}

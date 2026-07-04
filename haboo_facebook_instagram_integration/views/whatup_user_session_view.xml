@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_whatup_user_session_tree" model="ir.ui.view">
+        <field name="name">whatup.user.session.tree</field>
+        <field name="model">whatup.user.session</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="user_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_whatup_user_session_form" model="ir.ui.view">
+        <field name="name">whatup.user.session.form</field>
+        <field name="model">whatup.user.session</field>
+        <field name="arch" type="xml">
+            <form string="WhatsApp User Session">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="user_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_whatup_user_session" model="ir.actions.act_window">
+        <field name="name">WhatsApp User Sessions</field>
+        <field name="res_model">whatup.user.session</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_whatup_root" name="WhatsApp" sequence="10"/>
+    
+    <menuitem id="menu_whatup_user_session"
+              name="User Sessions"
+              parent="crm.crm_menu_sales"
+              action="action_whatup_user_session"
+              sequence="20"/>
+</odoo>

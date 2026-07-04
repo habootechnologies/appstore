@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="view_pop_up_wizard_form" model="ir.ui.view">
+            <field name="name">pop.wizard</field>
+            <field name="model">pop.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Convert Opportunity">
+                    <sheet>
+
+                        <div style="font-size: 16px; font-weight: bold; text-align: center; padding: 10px;">
+                            Do you want to create an opportunity without adding a customer name? 🤔
+                        </div>
+                        <group>
+                            <field style="font-size:16px;text-align: center;width:150px;font-weight: bold;" name="customer_name"/>
+                            <field name="cdr_history_ids"/>
+                            <field name="opportunity_pop_ids"/>
+                        </group>
+                        <footer>
+                            <button string="Yes ✅" name="action_yes" type="object" class="oe_highlight" close_on_action="True"/>
+                            <button string="No ❌" name="action_no" type="object" class="btn-secondary" close_on_action="True"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

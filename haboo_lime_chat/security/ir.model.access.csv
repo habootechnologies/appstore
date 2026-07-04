@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lime_chat,haboo_lime_chat,model_lime_chat,base.group_user,1,1,1,1
+access_lime_chat_convert_opportunity,lime_chat_convert_opportunity,model_lime_chat_convert_opportunity,base.group_user,1,1,1,1
+access_lime_chat_convert_opportunity_line,lime_chat_convert_opportunity_line,model_lime_chat_convert_opportunity_line,base.group_user,1,1,1,1

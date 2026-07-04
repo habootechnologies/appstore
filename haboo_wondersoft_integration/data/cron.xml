@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+
+<!--        <record id="wondersoft_access_token_generate" model="ir.cron">-->
+<!--            <field name="name">Wondersoft Access Token Update</field>-->
+<!--            <field name="model_id" ref="model_wondersoft_credential"/>-->
+<!--            <field name="state">code</field>-->
+<!--            <field name="code">model.get_access_token_from_wondersoft()</field>-->
+<!--            <field name='interval_number'>30</field>-->
+<!--            <field name='interval_type'>minutes</field>-->
+<!--        </record>-->
+        <record id="wondersoft_product_generate" model="ir.cron">
+            <field name="name">Wondersoft Product Creation</field>
+            <field name="model_id" ref="model_product_template"/>
+            <field name="state">code</field>
+            <field name="code">model.get_product_from_wondersoft()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+        </record>
+
+         <record id="wondersoft_product_generate_update" model="ir.cron">
+            <field name="name">Wondersoft Product Update</field>
+            <field name="model_id" ref="model_product_template"/>
+            <field name="state">code</field>
+            <field name="code">model.get_product_from_wondersoft_update()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+        </record>
+        <record id="wondersoft_customer_generate" model="ir.cron">
+            <field name="name">Wondersoft Customer Creation</field>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">model.get_customer_wondersoft_creation()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+        </record>
+        <record id="wondersoft_customer_update" model="ir.cron">
+            <field name="name">Wondersoft Customer Update</field>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">model.get_customer_wondersoft_update()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+        </record>
+        <record id="wondersoft_integration_sale_order_update" model="ir.cron">
+            <field name="name">Wondersoft Integration Sale Order Update</field>
+            <field name="model_id" ref="model_sale_order"/>
+            <field name="state">code</field>
+            <field name="code">model.get_wondersoft_sale_order_creation()</field>
+            <field name='interval_number'>5</field>
+            <field name='interval_type'>minutes</field>
+        </record>
+        <record id="wondersoft_integration_sale_order_update_one" model="ir.cron">
+            <field name="name">Wondersoft Integration Sale Order Update One</field>
+            <field name="model_id" ref="model_sale_order"/>
+            <field name="state">code</field>
+            <field name="code">model.get_wondersoft_sale_order_creation_one()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+        </record>
+
+    </data>
+</odoo>
