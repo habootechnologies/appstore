@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="view_lime_chat_convert_opportunity_form" model="ir.ui.view">
+        <field name="name">
+            lime.chat.convert.opportunity.form
+        </field>
+        <field name="model">
+            lime.chat.convert.opportunity
+        </field>
+        <field name="arch" type="xml">
+            <form string="Convert to Opportunity">
+                <group>
+                    <field name="lime_chat_id" invisible="1"/>
+                    <field name="convert_type" widget="radio"/>
+                </group>
+                <separator/>
+                <div attrs="{'invisible': [('convert_type', '!=', 'link')]}">
+                    <label for="line_ids" string="Existing Opportunities"/>
+                    <field name="line_ids" nolabel="1" readonly="1">
+                        <tree string="Existing Opportunities" create="0" delete="0" editable="bottom">
+                            <field name="opportunity_id" string="Opportunity"/>
+                            <field name="partner_id"/>
+                            <field name="email_from"/>
+                            <field name="phone"/>
+                            <field name="stage_id"/>
+                            <field name="user_id"/>
+                            <button name="button_link" string="Link" type="object" class="btn-primary" icon="fa-link"/>
+                        </tree>
+                    </field>
+                </div>
+                <group attrs="{'invisible': [('convert_type', '!=', 'create')]}">
+                    <group string="Opportunity Details">
+                        <field name="name" attrs="{'required': [('convert_type', '=', 'create')]}"/>
+                        <field name="priority" widget="priority"/>
+                        <field name="user_id"/>
+                        <field name="team_id"/>
+                        <field name="description"/>
+                    </group>
+                    <group string="Customer Information">
+                        <field name="action" widget="radio"/>
+                        <field name="partner_id" attrs="{'invisible': [('action', '!=', 'exist')], 'required': [('action', '=', 'exist')]}"/>
+                        <field name="partner_name" attrs="{'invisible': [('action', '!=', 'create')]}"/>
+                        <field name="email_from"/>
+                        <field name="phone"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_create_opportunity" string="Create Opportunity" type="object" class="btn-primary" attrs="{'invisible': [('convert_type', '!=', 'create')]}"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="access_lime_chat_convert_opportunity" model="ir.model.access">
+        <field name="name">
+            lime.chat.convert.opportunity
+        </field>
+        <field name="model_id" ref="model_lime_chat_convert_opportunity"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_lime_chat_convert_opportunity_line" model="ir.model.access">
+        <field name="name">
+            lime.chat.convert.opportunity.line
+        </field>
+        <field name="model_id" ref="model_lime_chat_convert_opportunity_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+</odoo>

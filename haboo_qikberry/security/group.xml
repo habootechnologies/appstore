@@ -1,0 +1,6 @@
+<odoo>
+    <record id="group_qikberry" model="res.groups">
+        <field name="name">Qikberry User</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,156 @@
+<odoo>
+    <data>
+        <record id="tata_whatsapp_2_filters_view_search" model="ir.ui.view">
+            <field name="name">
+                Tata Whatsapp Session 2 View Search
+            </field>
+            <field name="model">
+                tata.whatsapp.session.2
+            </field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="customer_name"/>
+                    <field name="customer_number"/>
+                    <field name="agent_user_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="tata_whatsapp_2_session_form_view" model="ir.ui.view">
+            <field name="name">
+                Tata Whatsapp Session 2 View Form
+            </field>
+            <field name="model">
+                tata.whatsapp.session.2
+            </field>
+            <field name="arch" type="xml">
+                <form string="Whatsapp Session 2">
+                    <header>
+                        <button name="create_opportunity_wizard" string="Convert to Opportunity" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'running')]}"/>
+                        <button name="close_session" string="Close Session" type="object" class="oe_highlight" attrs="{'invisible': [('is_close_visible', '=', False)]}"/>
+                        <button name="start_session" string="Start Session" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'new')]}"/>
+                        <button name="reopen_session" string="Start Session" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'close')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,running,close" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_opportunity" type="object" string="Opportunity" class="oe_stat_button"/>
+                        </div>
+                        <group>
+                            <field name="session_id" readonly="1"/>
+                            <field name="customer_name" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="customer_number" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            <field name="date" readonly="1"/>
+                            <field name="agent_user_id"/>
+                            <field name="sess_id" readonly="1"/>
+                            <field name="opportunity_id" readonly="1"/>
+                            <field name="last_massage_datetime" readonly="1"/>
+                            <field name="is_close_visible" invisible="1"/>
+                            <field name="is_gen_con"/>
+                            <field name="remarks" attrs="{'required': [('is_gen_con', '=', True)]}"/>
+                            <field name="new_opporunity" invisible="1"/>
+                        </group>
+                        <notebook>
+                            <page name="session_messages" string="Messages" attrs="{'invisible': [('state', '=', 'close')]}">
+                                <div class="o_row" style="align:center;width:50%;">
+                                    <field name="send_message" placeholder="Type your Message here" nolabel="1" attrs="{'invisible': [('state', '=', 'close')]}"/>
+                                    <field name="file_name" invisible="1"/>
+                                    <field name="product_image" filename="file_name"/>
+                                    <button name="action_send_message" type="object" id="wp_button_2" style="background-color: #1fb141 !important; border: none; padding: 0;" attrs="{'invisible': [('state', '=', 'close')]}">
+                                        <img src="/tata_whatsapp_integration_2/static/src/img/wp.png" alt="Send Message" style="height: 12px; width: 20px;"/>
+                                        Send Message
+                                    </button>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="tata_whatsapp_2_session_tree_view" model="ir.ui.view">
+            <field name="name">
+                Tata Whatsapp Session 2 View Tree
+            </field>
+            <field name="model">
+                tata.whatsapp.session.2
+            </field>
+            <field name="arch" type="xml">
+                <tree decoration-info="message_needaction">
+                    <field name="date"/>
+                    <field name="customer_name"/>
+                    <field name="agent_user_id"/>
+                    <field name="customer_number"/>
+                    <field name="last_massage_datetime" string="Last Message"/>
+                    <field name="state"/>
+                    <field name="message_needaction" invisible="1"/>
+                    <field name="message_needaction_counter" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_tata_whatsapp_session_2" model="ir.actions.act_window">
+            <field name="name">
+                Tata Whatsapp Session - 2
+            </field>
+            <field name="res_model">
+                tata.whatsapp.session.2
+            </field>
+            <field name="view_mode">
+                list,form
+            </field>
+        </record>
+        <menuitem id="tata_whatsapp_session2_menu" name="Tata Whatsapp Session - 2" parent="crm.crm_menu_sales" action="action_tata_whatsapp_session_2" groups="haboo_tata_whatsapp_integration.group_whatsapp_session_2_user" sequence="3"/>
+        <record model="ir.ui.view" id="res_config_settings_view_tata_auto_close_session_2_form">
+            <field name="name">
+                Auto close session 2 settings
+            </field>
+            <field name="model">
+                res.config.settings
+            </field>
+            <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='crm']" position="inside">
+                    <h2>
+                        Auto Close Session (No.2)
+                    </h2>
+                    <div class="row mt16 o_settings_container" name="tata_auto_close_setting_2_container">
+                        <div class="content-group">
+                            <div class="row">
+                                <label for="auto_close_minute_2" class="col-lg-4 o_light_label"/>
+                                <field name="auto_close_minute_2" class="col-lg-4 o_light_label"/>
+                                minutes
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="res_config_settings_view_tata_add_whatup_token_2">
+            <field name="name">
+                Session Token (No.2)
+            </field>
+            <field name="model">
+                res.config.settings
+            </field>
+            <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='crm']" position="inside">
+                    <h2>
+                        Session Token (No.2)
+                    </h2>
+                    <div class="row mt16 o_settings_container" name="settings_view_tata_add_whatup_token_2_container">
+                        <div class="content-group">
+                            <div class="row">
+                                <label for="session_token_2" class="col-lg-4 o_light_label"/>
+                                <field name="session_token_2" class="col-lg-4 o_light_label"/>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

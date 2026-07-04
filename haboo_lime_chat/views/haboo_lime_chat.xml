@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="view_lime_chat_tree" model="ir.ui.view">
+        <field name="name">
+            lime.chat.tree
+        </field>
+        <field name="model">
+            lime.chat
+        </field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="field_one" invisible="1"/>
+                <field name="field_two" invisible="1"/>
+                <field name="field_three" invisible="1"/>
+                <field name="field_four" invisible="1"/>
+                <field name="field_five" invisible="1"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="partner_name"/>
+                <field name="partner_email"/>
+                <field name="partner_phone"/>
+                <field name="opportunity_id" optional="show"/>
+                <field name="is_converted" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_lime_chat_form" model="ir.ui.view">
+        <field name="name">
+            lime.chat.form
+        </field>
+        <field name="model">
+            lime.chat
+        </field>
+        <field name="arch" type="xml">
+            <form string="Lime Chat">
+                <header>
+                    <button name="action_convert_to_opportunity" string="Convert to Opportunity" type="object" class="oe_highlight" attrs="{'invisible': [('is_converted', '=', True)]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_opportunity" type="object" class="oe_stat_button" icon="fa-star" attrs="{'invisible': [('opportunity_id', '=', False)]}">
+                            <field name="opportunity_id" widget="statinfo" string="Opportunity"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group string="Chat Details">
+                            <field name="field_one" invisible="1"/>
+                            <field name="field_two" invisible="1"/>
+                            <field name="field_three" invisible="1"/>
+                            <field name="field_four" invisible="1"/>
+                            <field name="field_five" invisible="1"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="is_converted" invisible="1"/>
+                        </group>
+                        <group string="Contact Information">
+                            <field name="partner_name"/>
+                            <field name="partner_email"/>
+                            <field name="partner_phone"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_lime_chat" model="ir.actions.act_window">
+        <field name="name">
+            Lime Chat
+        </field>
+        <field name="res_model">
+            lime.chat
+        </field>
+        <field name="view_mode">
+            list,form
+        </field>
+    </record>
+    <menuitem id="menu_lime_chat_root" name="Lime Chat" groups="haboo_lime_chat.group_lime_chat" sequence="10"/>
+    <menuitem id="menu_lime_chat" name="Chat Records" parent="menu_lime_chat_root" action="action_lime_chat" sequence="10"/>
+</odoo>

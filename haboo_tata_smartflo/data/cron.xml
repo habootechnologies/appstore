@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+
+        <record id="cdr_history_update_cron" model="ir.cron">
+            <field name="name">CDR History Update</field>
+            <field name="model_id" ref="model_cdr_history"/>
+            <field name="state">code</field>
+            <field name="code">model._update_cdr_history_data()</field>
+            <field name='interval_number'>30</field>
+            <field name='interval_type'>minutes</field>
+        </record>
+
+        <record id="ir_cron_auto_whatsapp_followup" model="ir.cron">
+            <field name="name">Auto send reminder for missed call</field>
+            <field name="model_id" ref="model_cdr_history"/>
+            <field name="state">code</field>
+            <field name="code">model.auto_whatsapp_followup()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="active" eval="False"/>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="res_config_settings_view_gupshup_form">
+            <field name="name">View Gupshup Configuration Settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='crm']" position="inside">
+                        <h2>Gupshup API Configuration</h2>
+                        <div class="row mt16 o_settings_container" name="gupshup_setting_container">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="gupshup_url" class="col-lg-4 o_light_label"/>
+                                    <field name="gupshup_url"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="gupshup_userid" class="col-lg-4 o_light_label"/>
+                                    <field name="gupshup_userid"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="gupshup_password" class="col-lg-4 o_light_label"/>
+                                    <field name="gupshup_password"/>
+                                </div>
+                            </div>
+                        </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

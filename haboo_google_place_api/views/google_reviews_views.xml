@@ -1,0 +1,148 @@
+<odoo>
+    <record id="google_review_view_form" model="ir.ui.view">
+        <field name="name">
+            google.review.view.form
+        </field>
+        <field name="model">
+            google.review
+        </field>
+        <field name="arch" type="xml">
+            <form string="Google Reviews">
+                <header>
+                    <button name="action_reply_review" type="object" string="Send Reply" class="btn-primary" attrs="{'invisible': [('readonly_review', '=', True)]}"/>
+                    <button name="action_edit_review" type="object" string="Edit Reply" class="btn-primary" attrs="{'invisible': [('readonly_review', '=', False)]}"/>
+                    <button name="action_cancle" type="object" string="Cancle" class="btn-primary" attrs="{'invisible': [('readonly_review', '=', True)]}"/>
+                    <button name="action_delete_review" type="object" string="Delete Reply" class="btn-secondary" attrs="{'invisible': [('replay_msg', '=', False)]}"/>
+                </header>
+                <sheet>
+                    <h2>
+                        <field name="name"/>
+                    </h2>
+                    <group>
+                        <group>
+                            <field name="review_author_name" readonly="1"/>
+                            <field name="location_name" readonly="1"/>
+                            <field name="addressLines" readonly="1"/>
+                            <field name="postalCode" readonly="1"/>
+                            <field name="regionCode" readonly="1" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="priority" widget="priority" readonly="1" string="Ratings"/>
+                            <field name="administrativeArea" readonly="1"/>
+                            <field name="locality" readonly="1"/>
+                            <field name="review_id" readonly="1" invisible="1"/>
+                            <field name="review_name" invisible="1"/>
+                            <field name="readonly_review" invisible="1"/>
+                            <field name="has_message" invisible="1"/>
+                            <field name="has_message" invisible="1"/>
+                            <field name="message_needaction_counter" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Review Time">
+                        <group>
+                            <field name="review_time" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="review_updated_time" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Message">
+                        <field name="original_text" readonly="1"/>
+                    </group>
+                    <group string="Reply">
+                        <field name="replay_msg" attrs="{'readonly': [('readonly_review', '=', True)]}"/>
+                    </group>
+                    <group string="Reply Time">
+                        <group>
+                            <field name="replay_updated_time" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="replay_time" readonly="1" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="google_review_view_tree" model="ir.ui.view">
+        <field name="name">
+            google.review.view.tree
+        </field>
+        <field name="model">
+            google.review
+        </field>
+        <field name="arch" type="xml">
+            <tree decoration-info="message_needaction">
+                <field name="name"/>
+                <field name="review_updated_time" readonly="1"/>
+                <field name="replay_updated_time" readonly="1"/>
+                <field name="review_author_name"/>
+                <field name="location_name"/>
+                <field name="administrativeArea"/>
+                <field name="locality"/>
+                <field name="postalCode"/>
+                <field name="regionCode"/>
+                <field name="addressLines"/>
+                <field name="priority" widget="priority" readonly="1" string="Ratings"/>
+                <field name="has_message" invisible="1"/>
+                <field name="message_needaction" invisible="1"/>
+                <field name="message_needaction_counter" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_google_review" model="ir.actions.act_window">
+        <field name="name">
+            Google Review
+        </field>
+        <field name="res_model">
+            google.review
+        </field>
+        <field name="view_mode">
+            list,form
+        </field>
+        <field name="context">
+            {'search_default_group_location': 1}
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No Records Found
+            </p>
+        </field>
+    </record>
+    <record id="google_review_view_search" model="ir.ui.view">
+        <field name="name">
+            google.review.view.search
+        </field>
+        <field name="model">
+            google.review
+        </field>
+        <field name="arch" type="xml">
+            <search string="Search Google Reviews">
+                <field name="name"/>
+                <field name="review_author_name"/>
+                <field name="location_name"/>
+                <field name="administrativeArea"/>
+                <field name="locality"/>
+                <field name="addressLines"/>
+                <separator/>
+                <filter name="review_updated_date" string="Reply Updated" date="review_updated_time"/>
+                <filter name="replay_updated_date" string="Reply Updated" date="replay_updated_time"/>
+                <separator/>
+                <field name="review_time"/>
+                <field name="replay_time"/>
+                <separator/>
+                <filter name="not_replied" string="Not Replied" domain="[('replay_msg', '=', False)]"/>
+                <group>
+                    <filter string="Location Name" name="group_location" context="{'group_by':'location_name'}"/>
+                    <filter string="Locality" name="group_locality" context="{'group_by':'locality'}"/>
+                    <filter string="Address Lines" name="group_address" context="{'group_by':'addressLines'}"/>
+                    <filter string="Administrative Area" name="group_admin_area" context="{'group_by':'administrativeArea'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

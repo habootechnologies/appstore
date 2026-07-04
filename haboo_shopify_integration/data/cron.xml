@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+        <record id="shopify_product_history_update" model="ir.cron">
+            <field name="name">Shopify Product History Update</field>
+            <field name="model_id" ref="model_product_template"/>
+            <field name="state">code</field>
+            <field name="code">model._update_shopify_product_history_data()</field>
+            <field name='interval_number'>5</field>
+            <field name='interval_type'>minutes</field>
+        </record>
+
+        <record id="shopify_customer_history_update" model="ir.cron">
+            <field name="name">Shopify Customer History Update</field>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">model._update_shopify_customer_data()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+        </record>
+
+        <record id="shopify_order_history_update" model="ir.cron">
+            <field name="name">Shopify Order History Update</field>
+            <field name="model_id" ref="model_sale_order"/>
+            <field name="state">code</field>
+            <field name="code">model._update_shopify_order_history_data()</field>
+            <field name='interval_number'>5</field>
+            <field name='interval_type'>minutes</field>
+        </record>
+
+        <record id="shopify_checkouts_history_update" model="ir.cron">
+            <field name="name">Shopify Checkouts History Update</field>
+            <field name="model_id" ref="model_abandoned_checkouts"/>
+            <field name="state">code</field>
+            <field name="code">model._update_shopify_abandoned_checkouts_history_data()</field>
+            <field name='interval_number'>5</field>
+            <field name='interval_type'>minutes</field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

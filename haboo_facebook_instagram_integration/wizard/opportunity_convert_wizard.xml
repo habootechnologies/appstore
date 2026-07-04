@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="opportunity_convert_wizard_view_form" model="ir.ui.view">
+            <field name="name">
+                Opportunity Convert Wizard Form View
+            </field>
+            <field name="model">
+                opportunity.convert.session.wizard
+            </field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="conversion_action" widget="radio"/>
+                            <field name="comment_id" invisible="1"/>
+                        </group>
+                        <group name="opportunity_assign" string="Assign this Opportunity to">
+                            <field name="user_id" options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="customer_number" attrs="{'invisible': [('comment_id', '=', False)]}"/>
+                        </group>
+                        <group name="customer_action" string="Customer" col="1">
+                            <field name="partner_action" nolabel="1" widget="radio"/>
+                            <group col="2">
+                                <field name="partner_id" attrs="{'invisible': [('partner_action', '!=', 'exist')]}"/>
+                            </group>
+                        </group>
+                        <field name="opportunity_ids"/>
+                    </sheet>
+                    <footer>
+                        <button name="action_create_opportunity" type="object" class="oe_highlight" string="Create Opportunity"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

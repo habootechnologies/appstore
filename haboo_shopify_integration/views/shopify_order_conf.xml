@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="sale_order_inherit_view_form" model="ir.ui.view">
+            <field name="name">
+                Sale Order Inherited view form
+            </field>
+            <field name="model">
+                sale.order
+            </field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='order_details']//field[@name='date_order']" position="after">
+                    <field name="shopify_order_id" readonly="1"/>
+                    <field name="from_shopify" readonly="1"/>
+                    <field name="fulfillment_status"/>
+                    <field name="tracking" widget="url" readonly="1"/>
+                    <field name="tracking_url" widget="url" readonly="1"/>
+                    <field name="updated_date" readonly="1"/>
+                    <field name="note" invisible="1"/>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <widget name="web_ribbon" title="CANCELED" bg_color="bg-danger" attrs="{'invisible': [('note', '!=', 'customer')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

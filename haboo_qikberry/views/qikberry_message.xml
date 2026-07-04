@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+        <record id="qikberry_filters_view_search" model="ir.ui.view">
+            <field name="name">
+                haboo_qikberry.message.search
+            </field>
+            <field name="model">
+                qikchat.message
+            </field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="to_contact"/>
+                    <field name="opportunity_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="qikchat_form_view" model="ir.ui.view">
+            <field name="name">
+                QikChat View Form
+            </field>
+            <field name="model">
+                qikchat.message
+            </field>
+            <field name="arch" type="xml">
+                <form string="Qikberry Messages">
+                    <header>
+                        <button name="qikberry_create_opportunity_wizard" string="Convert to Opportunity" type="object" class="oe_highlight"/>
+                        <button name="start_session" string="Start Session" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,running,close" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <group colspan="4">
+                            <group>
+                                <field name="message_id" readonly="1"/>
+                                <field name="to_contact" readonly="1"/>
+                                <field name="name" readonly="1"/>
+                                <field name="status" invisible="1"/>
+                                <field name="sent_at" readonly="1"/>
+                                <field name="delivered_at" readonly="1"/>
+                                <field name="read_at" invisible="1"/>
+                                <field name="create_date"/>
+                                <field name="processed_at"/>
+                                <field name="last_updated_at"/>
+                                <field name="opportunity_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Messages" attrs="{'invisible': [('state', '=', 'close')]}">
+                                <div class="o_row" style="align:center;width:50%;">
+                                    <field name="send_message" placeholder="Type your Message here" nolabel="1" attrs="{'invisible': [('state', '=', 'close')]}"/>
+                                    <field name="file_name" invisible="1"/>
+                                    <field name="product_image" filename="file_name"/>
+                                    <button name="action_send_message" type="object" id="wp_button" style="background-color: #1fb141 !important; border: none; padding: 0;" attrs="{'invisible': [('state', '=', 'close')]}">
+                                        <img src="/haboo_qikberry/static/img/wp.png" alt="Send Message" style="height: 12px; width: 20px;"/>
+                                        Send Message
+                                    </button>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="qikchat_tree_view" model="ir.ui.view">
+            <field name="name">
+                QikChat View Tree
+            </field>
+            <field name="model">
+                qikchat.message
+            </field>
+            <field name="arch" type="xml">
+                <tree create="true" default_order="last_updated_at desc">
+                    <field name="message_id" readonly="1"/>
+                    <field name="to_contact" readonly="1"/>
+                    <field name="name" readonly="1"/>
+                    <field name="status" readonly="1"/>
+                    <field name="sent_at" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_qikchat" model="ir.actions.act_window">
+            <field name="name">
+                QIKCHAT
+            </field>
+            <field name="res_model">
+                qikchat.message
+            </field>
+            <field name="view_mode">
+                list,form
+            </field>
+        </record>
+        <menuitem id="menu_sla_root" name="Qikberry" web_icon="haboo_qikberry,static/description/logo.png" groups="haboo_qikberry.group_qikberry"/>
+        <menuitem id="qikchat_menu" name="QIKCHAT" parent="haboo_qikberry.menu_sla_root" action="action_qikchat" groups="haboo_qikberry.group_qikberry" sequence="1"/>
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record id="qikberry_opportunity_convert_wizard_view_form" model="ir.ui.view">
+            <field name="name">
+                Qikberry Opportunity Convert Wizard Form View
+            </field>
+            <field name="model">
+                haboo_qikberry.opportunity.convert.wizard
+            </field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="conversion_action" widget="radio"/>
+                        </group>
+                        <group name="opportunity_assign" string="Assign this Opportunity to">
+                            <field name="user_id" options="{'no_create': True, 'no_edit': True}"/>
+                        </group>
+                        <group name="customer_action" string="Customer" col="1">
+                            <field name="partner_action" nolabel="1" widget="radio"/>
+                            <group col="2">
+                                <field name="partner_id" attrs="{'invisible': [('partner_action', '!=', 'exist')]}"/>
+                            </group>
+                        </group>
+                        <field name="opportunity_ids"/>
+                    </sheet>
+                    <footer>
+                        <button name="action_convert_opporunity" type="object" class="oe_highlight" string="Create Opportunity"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

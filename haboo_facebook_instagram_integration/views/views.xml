@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <record id="messenger_filters_view_search" model="ir.ui.view">
+            <field name="name">
+                Messanger Session View Search
+            </field>
+            <field name="model">
+                messenger.session
+            </field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="customer_name"/>
+                    <field name="customer_number"/>
+                    <field name="agent_user_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="messenger_session_form_view" model="ir.ui.view">
+            <field name="name">
+                Messanger Session View Form
+            </field>
+            <field name="model">
+                messenger.session
+            </field>
+            <field name="arch" type="xml">
+                <form string="Whatsapp Session">
+                    <header>
+                        <button name="create_opportunity_wizard" string="Convert to Opportunity" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('opportunity_id', '!=', False), ('state', '!=', 'running')]}"/>
+                        <button name="close_session" string="Close Session" type="object" class="oe_highlight" attrs="{'invisible': [('is_close_visible', '=', False)]}"/>
+                        <button name="start_session" string="Start Session" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'new')]}"/>
+                        <button name="reopen_session" string="Reopen Session" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'close')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,running,close" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_opportunity" type="object" string="Opportunity" class="oe_stat_button"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="provider_id" readonly="1"/>
+                                <field name="partner_id" readonly="1"/>
+                                <field name="company_id" readonly="1"/>
+                                <field name="date" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="sender_id" readonly="1"/>
+                                <field name="customer_name" readonly="1"/>
+                                <field name="message" invisible="1"/>
+                                <field name="opportunity_id" invisible="1"/>
+                                <field name="is_close_visible" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="messanger_session_tree_view" model="ir.ui.view">
+            <field name="name">
+                Messanger Session View Tree
+            </field>
+            <field name="model">
+                messenger.session
+            </field>
+            <field name="arch" type="xml">
+                <tree default_order="last_massage_datetime desc" decoration-info="message_needaction">
+                    <field name="customer_name"/>
+                    <field name="provider_id"/>
+                    <field name="date"/>
+                    <field name="last_massage_datetime" string="Last Message"/>
+                    <field name="state"/>
+                    <field name="message_needaction" invisible="1"/>
+                    <field name="message_needaction_counter" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_messanger_session" model="ir.actions.act_window">
+            <field name="name">
+                Messanger Session
+            </field>
+            <field name="res_model">
+                messenger.session
+            </field>
+            <field name="view_mode">
+                list,form
+            </field>
+        </record>
+        <menuitem id="messanger_session_menu" name="Messanger Session" parent="messenger_menu" action="action_messanger_session" sequence="2"/>
+    </data>
+</odoo>

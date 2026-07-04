@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="template_components_view_form" model="ir.ui.view">
+            <field name="name">
+                template.components.view.form
+            </field>
+            <field name="model">
+                template.components
+            </field>
+            <field name="arch" type="xml">
+                <form string="Components">
+                    <sheet>
+                        <group>
+                            <field name="type"/>
+                            <field name="media_type" attrs="{'invisible': [('type', '!=', 'media')]}"/>
+                            <field name="attachment_ids" widget="many2many_binary" attrs="{'invisible': [('type', '!=', 'media')]}"/>
+                            <field name="model_id" force_save="1" invisible="1"/>
+                            <field name="button_type" attrs="{'invisible': [('type', '!=', 'buttons')]}"/>
+                            <field name="text" attrs="{'invisible': ['|', ('type', '=', 'media'), ('type', '=', 'buttons'), ('button_type', '!=', 'quick_reply')]}"/>
+                        </group>
+                        <group>
+                            <field name="template_button_ids" widget="one2many" attrs="{'invisible': ['|', ('type', '!=', 'buttons'), ('button_type', '!=', 'call_to_action')]}">
+                                <tree string="Template Buttons" editable="bottom">
+                                    <field name="button_action"/>
+                                    <field name="button_text"/>
+                                    <field name="website_url" attrs="{'readonly': [('button_action', '!=', 'web_url')]}"/>
+                                    <field name="phone_number" attrs="{'readonly': [('button_action', '!=', 'phone_number')]}"/>
+                                    <field name="payload" attrs="{'readonly': [('button_action', '!=', 'postback')]}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="template_components_view_tree" model="ir.ui.view">
+            <field name="name">
+                template.components.view.tree
+            </field>
+            <field name="model">
+                template.components
+            </field>
+            <field name="arch" type="xml">
+                <tree string="Components">
+                    <field name="type"/>
+                    <field name="text"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

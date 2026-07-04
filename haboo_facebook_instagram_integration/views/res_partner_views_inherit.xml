@@ -1,0 +1,19 @@
+<odoo>
+    <record id="messenger_view_partner_inherited_view" model="ir.ui.view">
+        <field name="name">res.partner.inherit.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <label for="instagram_account_id" string="Instagram ID" />
+                <div class="display: flex;">
+                    <field name="instagram_account_id" style="width: 80%" />
+                </div>
+                <label for="messenger_account_id" string="Messenger ID" />
+                <div class="display: flex;">
+                    <field name="messenger_account_id" style="width: 80%" />
+                </div>
+            </field>
+        </field>
+    </record>
+</odoo>

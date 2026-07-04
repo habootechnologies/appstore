@@ -1,0 +1,16 @@
+<odoo>
+    <!-- Main menu -->
+
+    <menuitem id="google_api_main_menu" 
+        name="Google Reviews"
+        parent="crm.crm_menu_sales"
+        sequence="1"/>
+
+    <!-- Root menu -->
+
+    <menuitem id="google_api_root_menu" 
+        parent="google_api_main_menu"
+        action="action_google_review"
+        sequence="2"
+        name="Google Reviews"/>
+</odoo>
