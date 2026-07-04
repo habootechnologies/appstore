@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+
+        <record id="crm_lead_wondersoft_view_form_inherited" model="ir.ui.view">
+            <field name="name">Crm Lead Wondersoft Form View Inherited</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='expected_revenue']" position="after">
+                    <label for="wondersoft_order_no"/>
+                    <div class="o_row">
+                        <field name="wondersoft_order_no"/>
+                        <button name="update_sale_order_wondersoft" type="object" class="oe_highlight" string="Update"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

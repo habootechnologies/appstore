@@ -1,0 +1,408 @@
+<!-- ═══════════════════════════════════════════════════════════════
+     Haboo Lime Chat Integration — App Store Description
+     Layout: Bootstrap row/col + inline styles ONLY. No <style> block.
+     Icons: <img> tags pointing to local assets/ — no inline SVG
+     Compatible with Odoo App Store HTML sanitizer.
+════════════════════════════════════════════════════════════════ -->
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<div style="background:linear-gradient(135deg,#001F45 0%,#00438B 50%,#005EBD 100%); margin:0 -15px; padding:64px 30px 52px;">
+  <div class="row align-items-center" style="max-width:900px; margin:0 auto;">
+    <div class="col-md-7 col-sm-12">
+      <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(26,188,254,.15); border:1px solid rgba(26,188,254,.35); border-radius:20px; padding:6px 16px; margin-bottom:24px;">
+        <span style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#7DD3FA; font-family:Montserrat,sans-serif;">&#10003; &nbsp;Odoo 19 &middot; LimeChat Integration</span>
+      </div>
+      <h1 style="font-size:46px; font-weight:900; line-height:1.1; color:#ffffff; letter-spacing:-0.5px; margin:0 0 20px; font-family:Montserrat,sans-serif;">
+        LimeChat Conversations,<br>
+        <span style="color:#1ABCFE;">Captured in Odoo</span>
+      </h1>
+      <p style="font-size:18px; color:rgba(255,255,255,.82); line-height:1.65; margin:0 0 36px; max-width:600px; font-family:Montserrat,sans-serif;">
+        Incoming LimeChat chatbot messages land in Odoo automatically — every conversation is a record you can search, enrich, and convert to a CRM opportunity with one click.
+      </p>
+      <div class="d-flex flex-wrap" style="gap:24px;">
+        <span style="color:rgba(255,255,255,.7); font-size:13px; font-weight:600; font-family:Montserrat,sans-serif;">&#8644; &nbsp;Live Webhook Receiver</span>
+        <span style="color:rgba(255,255,255,.7); font-size:13px; font-weight:600; font-family:Montserrat,sans-serif;">&#128065; &nbsp;CRM Opportunity Conversion</span>
+        <span style="color:rgba(255,255,255,.7); font-size:13px; font-weight:600; font-family:Montserrat,sans-serif;">&#128101; &nbsp;Partner Auto-Detect</span>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 d-flex justify-content-center align-items-center" style="padding-top:32px;">
+      <img src="assets/hero/hero_icon.png" style="width:200px; height:200px; object-fit:contain;" alt="LimeChat Integration"/>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAV STRIP ──────────────────────────────────────────────────── -->
+<div style="padding:36px 0 20px;">
+  <div class="row" style="margin:0;">
+    <div class="col-md-3 col-sm-6" style="padding:8px;">
+      <a href="#overview" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; background:#F4F7FB; border:1px solid #DCE5F0; border-radius:10px; padding:20px 18px;">
+        <div><span style="font-size:14px; font-weight:600; color:#00438B; font-family:Montserrat,sans-serif; display:block;">Overview</span><small style="font-size:11px; color:#6B7A8D; font-family:Montserrat,sans-serif;">What this module does</small></div>
+        <img src="assets/misc/right-arrow.png" width="18" height="18" alt=""/>
+      </a>
+    </div>
+    <div class="col-md-3 col-sm-6" style="padding:8px;">
+      <a href="#features" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; background:#F4F7FB; border:1px solid #DCE5F0; border-radius:10px; padding:20px 18px;">
+        <div><span style="font-size:14px; font-weight:600; color:#00438B; font-family:Montserrat,sans-serif; display:block;">Features</span><small style="font-size:11px; color:#6B7A8D; font-family:Montserrat,sans-serif;">Full capability list</small></div>
+        <img src="assets/misc/right-arrow.png" width="18" height="18" alt=""/>
+      </a>
+    </div>
+    <div class="col-md-3 col-sm-6" style="padding:8px;">
+      <a href="#service" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; background:#F4F7FB; border:1px solid #DCE5F0; border-radius:10px; padding:20px 18px;">
+        <div><span style="font-size:14px; font-weight:600; color:#00438B; font-family:Montserrat,sans-serif; display:block;">Our Services</span><small style="font-size:11px; color:#6B7A8D; font-family:Montserrat,sans-serif;">How we can help</small></div>
+        <img src="assets/misc/right-arrow.png" width="18" height="18" alt=""/>
+      </a>
+    </div>
+    <div class="col-md-3 col-sm-6" style="padding:8px;">
+      <a href="#support" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; background:#F4F7FB; border:1px solid #DCE5F0; border-radius:10px; padding:20px 18px;">
+        <div><span style="font-size:14px; font-weight:600; color:#00438B; font-family:Montserrat,sans-serif; display:block;">Support</span><small style="font-size:11px; color:#6B7A8D; font-family:Montserrat,sans-serif;">Get in touch</small></div>
+        <img src="assets/misc/right-arrow.png" width="18" height="18" alt=""/>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── WHY THIS MODULE ────────────────────────────────────────────── -->
+<div style="background:#F4F7FB; margin:0 -15px; padding:40px 30px;">
+  <div class="row" style="margin:0;">
+    <div class="col-md-3 col-sm-6" style="padding:0 12px 16px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:12px; padding:24px 20px; height:100%;">
+        <div style="width:48px; height:48px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><img src="assets/icons/puzzle.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#00438B; margin-bottom:6px; font-family:Montserrat,sans-serif;">No Lost Chats</div>
+        <div style="font-size:12.5px; color:#3D4F63; line-height:1.6; font-family:Montserrat,sans-serif;">Webhook at <code style="font-size:11px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">/webhook/haboo_lime_chat</code> captures every incoming conversation before it disappears from the chat platform.</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6" style="padding:0 12px 16px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:12px; padding:24px 20px; height:100%;">
+        <div style="width:48px; height:48px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><img src="assets/icons/cogs.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#00438B; margin-bottom:6px; font-family:Montserrat,sans-serif;">Five Extension Fields</div>
+        <div style="font-size:12.5px; color:#3D4F63; line-height:1.6; font-family:Montserrat,sans-serif;"><code style="font-size:11px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">field_one</code> through <code style="font-size:11px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">field_five</code> carry any extra data LimeChat sends — no schema changes as your integration grows.</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6" style="padding:0 12px 16px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:12px; padding:24px 20px; height:100%;">
+        <div style="width:48px; height:48px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><img src="assets/icons/wrench.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#00438B; margin-bottom:6px; font-family:Montserrat,sans-serif;">One-Click to CRM</div>
+        <div style="font-size:12.5px; color:#3D4F63; line-height:1.6; font-family:Montserrat,sans-serif;">Convert any chat to a CRM opportunity: create a new lead or link to an existing one, with partner auto-detection by email or phone.</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6" style="padding:0 12px 16px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:12px; padding:24px 20px; height:100%;">
+        <div style="width:48px; height:48px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:14px;"><img src="assets/icons/user.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#00438B; margin-bottom:6px; font-family:Montserrat,sans-serif;">Named Contact Ownership</div>
+        <div style="font-size:12.5px; color:#3D4F63; line-height:1.6; font-family:Montserrat,sans-serif;">Partner name, email, and phone are stored on every chat record — so there is always a human owner behind every captured conversation.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── OVERVIEW ───────────────────────────────────────────────────── -->
+<div style="padding:64px 0;" id="overview">
+  <div class="row align-items-center" style="margin:0;">
+    <div class="col-md-6 col-sm-12" style="padding:0 24px 24px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#00438B; margin-bottom:10px; font-family:Montserrat,sans-serif;">Overview</div>
+      <h2 style="font-size:30px; font-weight:800; color:#0F1923; line-height:1.25; margin-bottom:18px; font-family:Montserrat,sans-serif;">Chatbot conversations that become CRM opportunities</h2>
+      <p style="font-size:15px; color:#3D4F63; line-height:1.75; margin-bottom:16px; font-family:Montserrat,sans-serif;">LimeChat handles customer conversations on your website or social channels — but without an Odoo integration, those conversations exist only inside LimeChat. This module bridges the gap with a live webhook endpoint that captures every incoming chat as a structured Odoo record the moment it arrives.</p>
+      <p style="font-size:15px; color:#3D4F63; line-height:1.75; font-family:Montserrat,sans-serif;">Each <strong>Lime Chat</strong> record stores the customer's name, email, and phone alongside five flexible extension fields that map to any extra payload LimeChat sends. When a conversation shows sales potential, one button opens the <strong>Convert to Opportunity</strong> wizard — it finds existing partners and leads automatically, so your team creates a qualified opportunity in seconds.</p>
+    </div>
+    <div class="col-md-6 col-sm-12" style="padding:0 24px 24px;">
+      <div style="background:#00438B; border-radius:14px; padding:32px 28px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:18px; font-family:Montserrat,sans-serif;">What's Inside</div>
+        <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.10); border-radius:8px; padding:12px 14px; margin-bottom:10px;">
+          <img src="assets/icons/puzzle.png" width="22" height="22" alt=""/>
+          <span style="color:white; font-size:14px; font-weight:600; font-family:Montserrat,sans-serif;">Webhook endpoint for incoming chats</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.10); border-radius:8px; padding:12px 14px; margin-bottom:10px;">
+          <img src="assets/icons/cogs.png" width="22" height="22" alt=""/>
+          <span style="color:white; font-size:14px; font-weight:600; font-family:Montserrat,sans-serif;">5 flexible extension fields</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.10); border-radius:8px; padding:12px 14px; margin-bottom:10px;">
+          <img src="assets/icons/wrench.png" width="22" height="22" alt=""/>
+          <span style="color:white; font-size:14px; font-weight:600; font-family:Montserrat,sans-serif;">Convert to Opportunity wizard</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.10); border-radius:8px; padding:12px 14px;">
+          <img src="assets/icons/user.png" width="22" height="22" alt=""/>
+          <span style="color:white; font-size:14px; font-weight:600; font-family:Montserrat,sans-serif;">Partner auto-detection by email / phone</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── HOW IT WORKS ────────────────────────────────────────────────── -->
+<div style="background:#F4F7FB; margin:0 -15px; padding:64px 30px;">
+  <div style="text-align:center; margin-bottom:44px;">
+    <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#00438B; margin-bottom:10px; font-family:Montserrat,sans-serif;">Process</div>
+    <h2 style="font-size:30px; font-weight:800; color:#0F1923; margin-bottom:10px; font-family:Montserrat,sans-serif;">From chat to CRM opportunity in three steps</h2>
+    <p style="font-size:16px; color:#3D4F63; max-width:520px; margin:0 auto; font-family:Montserrat,sans-serif;">LimeChat fires a webhook — Odoo captures it — your team converts it. No manual data entry at any step.</p>
+  </div>
+  <div class="row align-items-center justify-content-center" style="margin:0;">
+    <div class="col-md-4 col-sm-12" style="padding:0 10px 20px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:28px 22px; text-align:center;">
+        <div style="width:36px; height:36px; border-radius:50%; background:#00438B; color:white; font-size:16px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-family:Montserrat,sans-serif;">1</div>
+        <div style="width:48px; height:48px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px;"><img src="assets/icons/puzzle.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">LimeChat sends a POST</div>
+        <p style="font-size:12.5px; color:#3D4F63; line-height:1.6; margin:0; font-family:Montserrat,sans-serif;">The platform fires a JSON payload to <code style="font-size:11px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">/webhook/haboo_lime_chat</code> with partner info, up to 5 text fields, and a bearer token.</p>
+      </div>
+    </div>
+    <div class="col-md-1 d-none d-md-flex justify-content-center" style="padding:0;">
+      <img src="assets/misc/right-arrow.png" width="28" height="28" alt="&rarr;"/>
+    </div>
+    <div class="col-md-3 col-sm-12" style="padding:0 10px 20px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:28px 22px; text-align:center;">
+        <div style="width:36px; height:36px; border-radius:50%; background:#00438B; color:white; font-size:16px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-family:Montserrat,sans-serif;">2</div>
+        <div style="width:48px; height:48px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px;"><img src="assets/icons/license.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Token validated, record created</div>
+        <p style="font-size:12.5px; color:#3D4F63; line-height:1.6; margin:0; font-family:Montserrat,sans-serif;">Token is checked against <code style="font-size:11px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">haboo_lime_chat.api.token</code> in System Parameters. On success, a new <strong>Lime Chat</strong> record is created automatically.</p>
+      </div>
+    </div>
+    <div class="col-md-1 d-none d-md-flex justify-content-center" style="padding:0;">
+      <img src="assets/misc/right-arrow.png" width="28" height="28" alt="&rarr;"/>
+    </div>
+    <div class="col-md-3 col-sm-12" style="padding:0 10px 20px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:28px 22px; text-align:center;">
+        <div style="width:36px; height:36px; border-radius:50%; background:#00438B; color:white; font-size:16px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-family:Montserrat,sans-serif;">3</div>
+        <div style="width:48px; height:48px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px;"><img src="assets/icons/wrench.png" width="28" height="28" alt=""/></div>
+        <div style="font-size:14px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Salesperson converts to opportunity</div>
+        <p style="font-size:12.5px; color:#3D4F63; line-height:1.6; margin:0; font-family:Montserrat,sans-serif;">One click opens the wizard — auto-finds existing partners and leads, lets the salesperson create a new opportunity or link to an existing one.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FEATURES ───────────────────────────────────────────────────── -->
+<div style="padding:64px 0;" id="features">
+  <div style="text-align:center; margin-bottom:44px;">
+    <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#00438B; margin-bottom:10px; font-family:Montserrat,sans-serif;">Features</div>
+    <h2 style="font-size:30px; font-weight:800; color:#0F1923; margin:0; font-family:Montserrat,sans-serif;">Everything the module gives you</h2>
+  </div>
+  <div class="row" style="margin:0;">
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding:8px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:26px 22px; height:100%;">
+        <div style="width:52px; height:52px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><img src="assets/icons/puzzle.png" width="30" height="30" alt=""/></div>
+        <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Webhook Auto-Record Creation</div>
+        <p style="font-size:13.5px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">The endpoint <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 5px; border-radius:3px;">/webhook/haboo_lime_chat</code> receives JSON, validates the token, and auto-creates a Lime Chat record — no manual entry required.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding:8px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:26px 22px; height:100%;">
+        <div style="width:52px; height:52px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><img src="assets/icons/cogs.png" width="30" height="30" alt=""/></div>
+        <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Five Flexible Extension Fields</div>
+        <p style="font-size:13.5px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;"><code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">field_one</code> through <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">field_five</code> map to <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">text_1</code>&ndash;<code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">text_5</code> in the payload. No schema changes needed as the API extends.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding:8px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:26px 22px; height:100%;">
+        <div style="width:52px; height:52px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><img src="assets/icons/user.png" width="30" height="30" alt=""/></div>
+        <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Partner Auto-Detection</div>
+        <p style="font-size:13.5px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">The wizard searches for an existing <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">res.partner</code> by email then by phone before prompting to create a new contact — fewer duplicates, faster conversion.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding:8px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:26px 22px; height:100%;">
+        <div style="width:52px; height:52px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><img src="assets/icons/wrench.png" width="30" height="30" alt=""/></div>
+        <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Convert to Opportunity Wizard</div>
+        <p style="font-size:13.5px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">Choose to <strong>create a new opportunity</strong> or <strong>link to an existing</strong> one. Wizard pre-fills name, email, phone, and description; lets you set salesperson, team, and priority before creating the lead.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding:8px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:26px 22px; height:100%;">
+        <div style="width:52px; height:52px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><img src="assets/icons/license.png" width="30" height="30" alt=""/></div>
+        <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Token-Secured Endpoint</div>
+        <p style="font-size:13.5px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">Every incoming request is validated against <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">haboo_lime_chat.api.token</code> in System Parameters. Mismatched tokens are rejected before any record is created.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding:8px;">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:14px; padding:26px 22px; height:100%;">
+        <div style="width:52px; height:52px; background:#00438B; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><img src="assets/icons/lifebuoy.png" width="30" height="30" alt=""/></div>
+        <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:8px; font-family:Montserrat,sans-serif;">Double-Conversion Guard</div>
+        <p style="font-size:13.5px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">The <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">is_converted</code> flag prevents the same chat from producing two separate opportunities. The Convert button is blocked once a lead is already linked.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── USE CASES ──────────────────────────────────────────────────── -->
+<div style="background:#EBF2FA; margin:0 -15px; padding:64px 30px;">
+  <div style="text-align:center; margin-bottom:40px;">
+    <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#00438B; margin-bottom:10px; font-family:Montserrat,sans-serif;">Perfect For</div>
+    <h2 style="font-size:30px; font-weight:800; color:#0F1923; margin:0; font-family:Montserrat,sans-serif;">Who needs this module</h2>
+  </div>
+  <div class="row" style="margin:0 0 16px;">
+    <div class="col-sm-12" style="padding:0 0 16px;">
+      <div class="d-flex align-items-start" style="gap:16px; background:#ffffff; border-top:1px solid #DCE5F0; border-right:1px solid #DCE5F0; border-bottom:1px solid #DCE5F0; border-left:4px solid #00438B; border-radius:10px; padding:22px 20px;">
+        <div style="width:44px; height:44px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><img src="assets/icons/wrench.png" width="24" height="24" alt=""/></div>
+        <div>
+          <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:6px; font-family:Montserrat,sans-serif;">Support Teams Using LimeChat</div>
+          <p style="font-size:13px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">Teams handling customer queries via LimeChat chatbots get every conversation automatically archived in Odoo — no copy-paste, no missed handoffs, full history in one place alongside all other customer data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin:0 0 16px;">
+    <div class="col-sm-12" style="padding:0 0 16px;">
+      <div class="d-flex align-items-start" style="gap:16px; background:#ffffff; border-top:1px solid #DCE5F0; border-right:1px solid #DCE5F0; border-bottom:1px solid #DCE5F0; border-left:4px solid #00438B; border-radius:10px; padding:22px 20px;">
+        <div style="width:44px; height:44px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><img src="assets/icons/puzzle.png" width="24" height="24" alt=""/></div>
+        <div>
+          <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:6px; font-family:Montserrat,sans-serif;">Sales Teams Converting Chat Leads</div>
+          <p style="font-size:13px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">Sales reps who monitor chat volumes can spot promising conversations and convert them to CRM opportunities in seconds — existing partners are found automatically, so setup is instant.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin:0;">
+    <div class="col-sm-12" style="padding:0;">
+      <div class="d-flex align-items-start" style="gap:16px; background:#ffffff; border-top:1px solid #DCE5F0; border-right:1px solid #DCE5F0; border-bottom:1px solid #DCE5F0; border-left:4px solid #00438B; border-radius:10px; padding:22px 20px;">
+        <div style="width:44px; height:44px; background:#00438B; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><img src="assets/icons/cogs.png" width="24" height="24" alt=""/></div>
+        <div>
+          <div style="font-size:15px; font-weight:700; color:#0F1923; margin-bottom:6px; font-family:Montserrat,sans-serif;">Multi-Channel CRM Operators</div>
+          <p style="font-size:13px; color:#3D4F63; line-height:1.65; margin:0; font-family:Montserrat,sans-serif;">Businesses managing customers across chat, email, and phone can use this module to pull LimeChat into the same Odoo CRM where all other customer touchpoints already live.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WHAT YOU GET ───────────────────────────────────────────────── -->
+<div style="padding:64px 0;">
+  <div class="row align-items-start" style="margin:0;">
+    <div class="col-md-7 col-sm-12" style="padding:0 24px 24px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#00438B; margin-bottom:10px; font-family:Montserrat,sans-serif;">What You Get</div>
+      <h2 style="font-size:30px; font-weight:800; color:#0F1923; margin-bottom:28px; font-family:Montserrat,sans-serif;">Every capability, listed plainly</h2>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Dedicated <strong>Lime Chat</strong> model (<code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">lime.chat</code>) with list + form views</span>
+      </div>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Webhook at <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">/webhook/haboo_lime_chat</code> — public POST, JSON body, no CSRF</span>
+      </div>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Token validation via <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">haboo_lime_chat.api.token</code> in System Parameters</span>
+      </div>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Five free-text extension fields (<strong>field_one &rarr; field_five</strong>) mapping to LimeChat payload <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">text_1</code>&ndash;<code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">text_5</code></span>
+      </div>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Partner contact fields: <strong>name, email, phone</strong> per chat record</span>
+      </div>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Convert to Opportunity wizard: <strong>create new</strong> or <strong>link to existing</strong> lead with salesperson, team, and priority assignment</span>
+      </div>
+      <div style="border-bottom:1px solid #DCE5F0; padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;">Partner auto-detection by email + phone before prompting to create a new contact</span>
+      </div>
+      <div style="padding:11px 0; display:flex; align-items:flex-start; gap:12px;">
+        <span style="flex-shrink:0; margin-top:1px; width:18px; height:18px; background:#00438B; border-radius:50%; color:white; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center;">&#10003;</span>
+        <span style="font-size:14px; color:#3D4F63; line-height:1.55; font-family:Montserrat,sans-serif;"><code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">is_converted</code> flag prevents double-conversion; <code style="font-size:12px; background:#EBF2FA; color:#00438B; padding:1px 4px; border-radius:3px;">opportunity_id</code> links record to the resulting CRM lead</span>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12" style="padding:0 24px 24px;">
+      <div style="background:linear-gradient(145deg,#00438B 0%,#005EBD 100%); border-radius:14px; padding:32px 28px; color:white;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:18px; font-family:Montserrat,sans-serif;">At a Glance</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,.12); padding-bottom:14px; margin-bottom:14px;">
+          <span style="font-size:13px; color:rgba(255,255,255,.75); font-family:Montserrat,sans-serif;">Webhook endpoints</span>
+          <span style="font-size:22px; font-weight:800; color:white; font-family:Montserrat,sans-serif;">1</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,.12); padding-bottom:14px; margin-bottom:14px;">
+          <span style="font-size:13px; color:rgba(255,255,255,.75); font-family:Montserrat,sans-serif;">Extension fields</span>
+          <span style="font-size:22px; font-weight:800; color:white; font-family:Montserrat,sans-serif;">5</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,.12); padding-bottom:14px; margin-bottom:14px;">
+          <span style="font-size:13px; color:rgba(255,255,255,.75); font-family:Montserrat,sans-serif;">CRM integration</span>
+          <span style="font-size:22px; font-weight:800; color:white; font-family:Montserrat,sans-serif;">&#10003;</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:13px; color:rgba(255,255,255,.75); font-family:Montserrat,sans-serif;">External dependencies</span>
+          <span style="font-size:22px; font-weight:800; color:#1ABCFE; font-family:Montserrat,sans-serif;">0</span>
+        </div>
+      </div>
+      <div style="margin-top:14px; background:#EBF2FA; border-radius:10px; border-left:3px solid #00438B; padding:16px 18px; font-size:13px; color:#3D4F63; line-height:1.6; font-family:Montserrat,sans-serif;">
+        <strong style="color:#00438B;">Depends on</strong> <code style="background:white; border:1px solid #DCE5F0; padding:1px 5px; border-radius:3px; font-size:11px;">base</code> and <code style="background:white; border:1px solid #DCE5F0; padding:1px 5px; border-radius:3px; font-size:11px;">crm</code>. No third-party Python packages required at install time.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TECH STRIP ──────────────────────────────────────────────────── -->
+<div style="border-top:1px solid #DCE5F0; border-bottom:1px solid #DCE5F0; background:#F4F7FB; margin:0 -15px; padding:24px 30px;">
+  <div style="text-align:center; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#6B7A8D; margin-bottom:14px; font-family:Montserrat,sans-serif;">Compatibility &amp; Technical</div>
+  <div class="d-flex flex-wrap justify-content-center" style="gap:10px;">
+    <span style="display:inline-block; background:white; border:1px solid #DCE5F0; border-radius:20px; padding:7px 18px; font-size:13px; font-weight:600; color:#3D4F63; font-family:Montserrat,sans-serif;">Odoo 18.0</span>
+    <span style="display:inline-block; background:white; border:1px solid #DCE5F0; border-radius:20px; padding:7px 18px; font-size:13px; font-weight:600; color:#3D4F63; font-family:Montserrat,sans-serif;">Depends: base, crm</span>
+    <span style="display:inline-block; background:white; border:1px solid #DCE5F0; border-radius:20px; padding:7px 18px; font-size:13px; font-weight:600; color:#3D4F63; font-family:Montserrat,sans-serif;">License: OPL-1</span>
+    <span style="display:inline-block; background:white; border:1px solid #DCE5F0; border-radius:20px; padding:7px 18px; font-size:13px; font-weight:600; color:#3D4F63; font-family:Montserrat,sans-serif;">Webhook: JSON POST</span>
+    <span style="display:inline-block; background:white; border:1px solid #DCE5F0; border-radius:20px; padding:7px 18px; font-size:13px; font-weight:600; color:#3D4F63; font-family:Montserrat,sans-serif;">v19.0.1.0.0</span>
+  </div>
+</div>
+
+<!-- ── OUR SERVICES ───────────────────────────────────────────────── -->
+<div style="padding:64px 0;" id="service">
+  <div style="text-align:center; margin-bottom:40px;">
+    <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#00438B; margin-bottom:10px; font-family:Montserrat,sans-serif;">From Haboo Technologies</div>
+    <h2 style="font-size:30px; font-weight:800; color:#0F1923; margin:0; font-family:Montserrat,sans-serif;">Our Odoo Services</h2>
+  </div>
+  <div class="row justify-content-center" style="margin:0;">
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#1dd1a1; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/cogs.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Odoo Customization</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#ff6b6b; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/wrench.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Odoo Implementation</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#6462CD; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/lifebuoy.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Support &amp; Maintenance</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#ffa801; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/user.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">App Development</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#54a0ff; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/puzzle.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Odoo Integration</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#6d7680; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/update.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Odoo Migration</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#786fa6; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/consultation.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Odoo Consultancy</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#f8a5c2; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/training.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Developer Outsourcing</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center" style="margin-bottom:28px;">
+      <div style="background:#e6be26; border-radius:16px; width:72px; height:72px; display:flex; align-items:center; justify-content:center; margin-bottom:10px;"><img src="assets/icons/license.png" width="40" height="40" alt=""/></div>
+      <span style="font-size:13px; font-weight:700; color:#0F1923; text-align:center; font-family:Montserrat,sans-serif;">Licensing Consultancy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── SUPPORT ────────────────────────────────────────────────────── -->
+<div style="background:#F4F7FB; margin:0 -15px; padding:64px 30px;" id="support">
+  <div class="row justify-content-center" style="margin:0;">
+    <div class="col-md-6 col-sm-10 col-xs-12">
+      <div style="background:#ffffff; border:1px solid #DCE5F0; border-radius:16px; padding:44px 36px; text-align:center; box-shadow:0 2px 12px rgba(0,67,139,.08);">
+        <div style="width:72px; height:72px; border-radius:50%; background:#00438B; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+          <img src="assets/misc/support.png" style="width:40px; height:40px;" alt=""/>
+        </div>
+        <h4 style="font-size:20px; font-weight:800; color:#0F1923; margin-bottom:10px; font-family:Montserrat,sans-serif;">Need Help?</h4>
+        <p style="font-size:14px; color:#3D4F63; margin-bottom:20px; line-height:1.6; font-family:Montserrat,sans-serif;">Questions about installation, configuration, or customisation? We're here — just write to us.</p>
+        <a href="mailto:habootechnologies@gmail.com" style="font-size:17px; font-weight:700; color:#00438B; text-decoration:none; font-family:Montserrat,sans-serif;">habootechnologies@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center" style="margin-top:40px;">
+    <div class="col-md-6 col-sm-8 d-flex justify-content-center">
+      <img src="company_logo.png" style="max-height:110px; max-width:360px; object-fit:contain; opacity:.9;" alt="Haboo Technologies"/>
+    </div>
+  </div>
+</div>

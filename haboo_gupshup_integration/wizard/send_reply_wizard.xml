@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+
+        <record id="send_reply_wizard_form_view" model="ir.ui.view">
+            <field name="name">Send Reply Wizard View Form</field>
+            <field name="model">send.reply.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="sender_number"/>
+                            <field name="message"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_send_reply" type="object" class="oe_highlight" string="Send"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

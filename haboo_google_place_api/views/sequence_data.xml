@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+   <data noupdate="1">
+        <record id="google_review_sequence" model="ir.sequence">
+           <field name="name">google.review</field>
+           <field name="code">google.review.code</field>
+           <field name="prefix">GR/</field>
+           <field name="padding">4</field>
+        </record>
+   </data>
+</odoo>

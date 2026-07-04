@@ -1,0 +1,128 @@
+<odoo>
+    <record model="ir.ui.view" id="provider_form_view">
+        <field name="name">provider.form</field>
+        <field name="model">provider</field>
+        <field name="arch" type="xml">
+            <form string="Provider">
+                <header>
+                    <button name="messenger_reload_with_get_status"
+                        type="object"
+                        class="btn-primary"
+                        string="Connect"
+                        icon="fa-refresh"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group string="Provider">
+                        <group name="payment_state">
+                            <field name="provider"/>
+                            <field name="meta_platform"/>
+                        </group>
+                        <group>
+                            <field name="state" widget="radio" options='{"horizontal" : True}'/>
+                            <field name="graph_api_url" invisible="provider != 'graph_api'"/>
+                        </group>
+                    </group>
+                    <group string="Token">
+                        <field name="graph_api_token" invisible="provider != 'graph_api'" password="True"/>
+                        <field name="call_back_url" 
+                            invisible="is_token_generated == False" readonly="is_token_generated == False"
+                            force_save="1"/>
+                        <field name="is_token_generated" invisible="1"/>
+                    </group>
+                    <group string="Account Information">
+                        <group>
+                            <field name="username" invisible="provider != 'graph_api'" readonly="provider == 'graph_api'"/>
+                            <field name="account_id" invisible="provider != 'graph_api'" readonly="provider == 'graph_api'"/>
+                            <field name="instagram_business_account_id" invisible="provider != 'graph_api'" readonly="provider == 'graph_api'"/>
+                        </group>
+                        <group>
+                            <field name="graph_api_authentication" invisible="provider != 'graph_api'"/>
+                            <field name="graph_api_authenticated" invisible="provider != 'graph_api'" readonly="provider == 'graph_api'"/>
+                            <field name="facebook_page_id"/>
+                            <field name="facebook_page_token"/>
+                        </group>
+                    </group>
+                    <group string="Extra">
+                        <group>
+                            <field name="user_id" invisible="provider != 'graph_api'"/>
+                        </group>
+                        <group>
+                            <field name="company_id" options='{"no_open":True}'/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Operators" name="operators">
+                            <field name="user_ids">
+                                <kanban>
+                                    <field name="id"/>
+                                    <field name="name"/>
+                                    <templates>
+                                        <t t-name="card">
+                                            <div class="oe_kanban_global_click">
+                                                <div class="o_kanban_image">
+                                                    <img t-att-src="kanban_image('res.users', 'avatar_128', record.id.raw_value)"
+                                                         alt="User"/>
+                                                </div>
+                                                <div class="o_kanban_details">
+                                                    <h4 class="o_kanban_record_title">
+                                                        <field name="name"/>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="provider_tree_view">
+        <field name="name">provider.tree</field>
+        <field name="model">provider</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="messenger_provider_action">
+        <field name="name">Provider</field>
+        <field name="res_model">provider</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+            id="messenger_menu"
+            name="Messenger"
+            parent="crm.crm_menu_sales"/>
+    <menuitem
+            id="messenger_provider_menu"
+            name="Messenger Provider"
+            action="messenger_provider_action"
+            parent="crm.crm_menu_config"
+            sequence="3"    
+            />
+<!--     <menuitem
+            id="message_history"
+            name="History"
+            parent="messenger_menu"
+            sequence="5"
+    /> -->
+<!--     <menuitem
+            id="messenger_configuration"
+            name="Configuration"
+            parent="messenger_menu"
+    /> -->
+                <!-- parent="crm.crm_menu_sales" -->
+
+</odoo>

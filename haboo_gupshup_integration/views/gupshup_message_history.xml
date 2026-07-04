@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+
+        <record id="gupshup_whatsapp_messages_form_view" model="ir.ui.view">
+            <field name="name">Gupshup Whatsapp Messages View Form</field>
+            <field name="model">gupshup.whatsapp.messages</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_opt_in" type="object" class="oe_highlight" string="OPT IN"/>
+                        <button name="create_send_reply" type="object" class="oe_highlight" string="Send Reply"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="sender_name" readonly="1"/>
+                            <field name="sender_number" readonly="1"/>
+                            <field name="wa_number" readonly="1"/>
+                            <field name="message" readonly="1"/>
+                            <field name="image_url" widget="url" readonly="1"/>
+                            <field name="message_type" readonly="1"/>
+                            <field name="message_id" readonly="1"/>
+                            <field name="date"  readonly="1"/>
+                            <field name="partner_id"  readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="gupshup_whatsapp_messages_tree_view" model="ir.ui.view">
+            <field name="name">Gupshup Whatsapp Messages View Tree</field>
+            <field name="model">gupshup.whatsapp.messages</field>
+            <field name="arch" type="xml">
+                <list default_order="date desc">
+                    <field name="sender_name"/>
+                    <field name="sender_number"/>
+                    <field name="date"/>
+                    <field name="message"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_gupshup_whatsapp_messages" model="ir.actions.act_window">
+            <field name="name">Gupshup Whatsapp Messages</field>
+            <field name="res_model">gupshup.whatsapp.messages</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem
+                id="menu_gupshup_whatsapp_messages"
+                name="Gupshup"
+                parent="crm.crm_menu_root"
+                action="action_gupshup_whatsapp_messages"
+                sequence="2"
+        />
+
+    </data>
+</odoo>

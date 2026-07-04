@@ -1,0 +1,161 @@
+<odoo>
+    <record id="res_config_settings_view_form_inherit_google_place_api" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.google.place</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='invite_users']" position="inside">
+                <h2>Google Credentials</h2>
+                <div class="row mt16 o_settings_container" id="google_credentials">
+
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_client_id">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Client ID</span>
+                            <div class="text-muted">
+                                Google Client Id
+                            </div>
+                            <div class="text-muted">
+                                <field name="google_client_id"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_client_secret">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Google Secret</span>
+                            <div class="text-muted">
+                                Google Secret
+                            </div>
+                            <div class="text-muted">
+                                <field name="google_client_secret"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="scheduler_record_limit">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Review Limit</span>
+                            <div class="text-muted">
+                                Review Limit
+                            </div>
+                            <div class="text-muted">
+                                <field name="scheduler_record_limit"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_redirect_uri">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Redirect Uri</span>
+                            <div class="text-muted">
+                                Redirect Uri
+                            </div>
+                            <div class="text-muted">
+                                <field name="google_redirect_uri"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_redirect_uri">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <button name="action_connect_google"
+                                string="Connect Google"
+                                type="object"
+                                class="btn btn-primary"
+                                icon="fa-google"/>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="get_all_reviews">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <button name="get_all_reviews"
+                                string="Get All Reviews"
+                                type="object"
+                                class="btn btn-primary"
+                                icon="fa-google"/>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_access_token" invisible="1">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Access Token</span>
+                            <div class="text-muted">
+                                Access Token 
+                            </div>
+                            <div class="text-muted">
+                                <field name="google_access_token"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_refresh_token" invisible="1">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Refresh Token</span>
+                            <div class="text-muted">
+                                Refresh Token
+                            </div>
+                            <div class="text-muted">
+                                <field name="google_refresh_token"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="google_token_expiry_seconds" invisible="1">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Expiry Seconds</span>
+                            <div class="text-muted">
+                                Expiry Seconds
+                            </div>
+                            <div class="text-muted">
+                                <field name="google_token_expiry_seconds"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+<!--     <record id="google_review_cron_job" model="ir.cron">
+        <field name="name">Google Review Cron Job</field>
+        <field name="model_id" ref="model_google_review"/>
+        <field name="state">code</field>
+        <field name="code">model.get_google_reviews()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+    </record> -->
+
+
+    <!-- Hourly: Fetch latest (limited) -->
+    <record id="google_review_cron_hourly" model="ir.cron">
+        <field name="name">Google Review Fetch (Hourly - Limited)</field>
+        <field name="model_id" ref="model_google_review"/>
+        <field name="state">code</field>
+        <field name="code">model.get_google_reviews('limit')</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+    </record>
+
+    <!-- Weekly: Fetch all -->
+    <record id="google_review_cron_weekly" model="ir.cron">
+        <field name="name">Google Review Fetch (Weekly - Full)</field>
+        <field name="model_id" ref="model_google_review"/>
+        <field name="state">code</field>
+        <field name="code">model.get_google_reviews('full')</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">weeks</field>
+        <field name="active">False</field>
+
+    </record>
+
+</odoo>
+

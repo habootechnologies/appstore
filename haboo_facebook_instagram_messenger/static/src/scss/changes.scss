@@ -1,0 +1,74 @@
+.nav-item a.active {
+    color: #fff !important;
+    background: linear-gradient(45deg, #714b67, #5e4a59) !important;
+}
+
+.functional_tab {
+    color: linear-gradient(45deg, #714b67, #5e4a59) !important;
+}
+#navbarSupportedContent ul li a {
+    color: linear-gradient(45deg, #714b67, #5e4a59) !important;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+#navbarSupportedContent > ul > li.active > a {
+    background: linear-gradient(45deg, #714b67, #5e4a59) !important;
+    color: #fff;
+}
+
+.main-button {
+    margin-left: 5rem;
+}
+#main-buttons-view .o_form_button_save {
+    background: linear-gradient(45deg, #714b67, #5e4a59) !important;
+}
+
+@media (max-width: 991px) {
+    .im_chat_box_tab {
+        width: 50%;
+        text-align: center;
+    }
+    .im_chat_box_tab.active {
+        color: #fff !important;
+        background: linear-gradient(45deg, #714b67, #5e4a59) !important;
+    }
+    .im_chat_box_tab.active a {
+        color: #fff;
+    }
+    .im_chat_box_tab a {
+        color: linear-gradient(45deg, #714b67, #5e4a59) !important;
+    }
+}
+
+.im_chat_box_tab {
+    width: 50%;
+    text-align: center;
+}
+.im_chat_box_tab.active {
+    color: #fff !important;
+    background: linear-gradient(45deg, #714b67, #5e4a59) !important;
+}
+.im_chat_box_tab.active a {
+    color: #fff;
+}
+.im_chat_box_tab a {
+    color: linear-gradient(45deg, #714b67, #5e4a59) !important;
+}
+
+.o_Message_content {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    .o_Message_seenIndicator {
+        display: flex;
+        position: absolute;
+        right: -12px;
+        bottom: -12px;
+        &.o_icon_read {
+            i {
+                color: #53bdeb;
+            }
+        }
+    }
+}
