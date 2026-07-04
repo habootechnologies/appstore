@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="res_config_settings_view_tata_smartflo_form">
+            <field name="name">View Tata Smartflo Configuration Settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="crm.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='crm']" position="inside">
+<!--                    <div class="app_settings_block" data-string="haboo_tata_smartflo" string="Tata Smartflo" data-key="haboo_tata_smartflo">-->
+                        <h2>API Configuration</h2>
+                        <div class="row mt16 o_settings_container" name="tata_smartflo_setting_container">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="smartflo_access_token" class="col-lg-4 o_light_label"/>
+                                    <field name="smartflo_access_token"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="cdr_access_url" class="col-lg-4 o_light_label"/>
+                                    <field name="cdr_access_url"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="note_update_url" class="col-lg-4 o_light_label"/>
+                                    <field name="note_update_url"/>
+                                </div>
+                            </div>
+                        </div>
+<!--                    </div>-->
+                </xpath>
+            </field>
+        </record>
+
+        <!--<record id="action_tata_smartflo_settings" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_id" ref="res_config_settings_view_tata_smartflo_form"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'haboo_tata_smartflo', 'bin_size': False}</field>
+        </record>-->
+
+        <!--<menuitem
+            id="tata_smartflo_menu_settings"
+            name="Settings"
+            parent="tata_smartflo_menu_configuration"
+            action="action_tata_smartflo_settings"
+            sequence="1"
+        />-->
+
+    </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_qikchat_message_user,qikchat_message,model_qikchat_message,base.group_user,1,1,1,1
+access_qikberry_opportunity_convert_wizard_user,qikberry_opportunity_convert_wizard_user,model_haboo_qikberry_opportunity_convert_wizard,,1,1,1,1
+access_existing_qikberry_opportunity_line_user,existing_qikberry_opportunity_line_user,model_existing_haboo_qikberry_opportunity_line,,1,1,1,1

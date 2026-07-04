@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+
+        <record id="opportunity_convert_wizard_view_form" model="ir.ui.view">
+            <field name="name">Opportunity Convert Wizard Form View</field>
+            <field name="model">opportunity.convert.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div>
+                            <field name="html" nolabel="1" widget="html" readonly="1"/>
+                        </div>
+                        <group>
+                            <field name="yes_or_no" widget="radio" nolabel="1"/>
+                        </group>
+
+                        <group invisible="yes_or_no not in ('yes', 'no')">
+                            <group>
+                                <field name="conversion_action" widget="radio" invisible="yes_or_no == 'yes'"/>
+                                <field name="partner_action_transfer" widget="radio" invisible="yes_or_no == 'no'"/>
+                            </group>
+                        </group>
+                        <group invisible="yes_or_no not in ('yes', 'no')">
+                            <group name="customer_action" string="Customer" col="1">
+                                <field name="partner_action" nolabel="1" widget="radio"/>
+                                <group col="2">
+                                    <field name="partner_name" invisible="partner_action != 'create'"/>
+                                    <field name="client_number" invisible="partner_action != 'create'"/>
+                                    <field name="pop_boolean" invisible="1"/>
+                                    <field name="new_customer" invisible="1"/>
+                                    <field name="partner_id" invisible="partner_action != 'exist'"/>
+                                </group>
+                            </group>
+
+                            <group name="opportunity_assign" string="Assign this Opportunity to">
+                                <field name="user_id" options="{'no_create': True, 'no_edit': True}" readonly="yes_or_no == 'no'"/>
+                                <field name="team_id" options="{'no_create': True, 'no_edit': True}" invisible="1"/>
+                            </group>
+                            <field name="opportunity_ids"/>
+                        </group>
+
+                        <footer>
+                            <button name="action_create_opportunity" type="object" class="oe_highlight"
+                                    string="Create Opportunity"
+                                    invisible="conversion_action == 'merge'"/>
+                            <button name="button_link" type="object" class="oe_highlight" string="Link"
+                                    invisible="conversion_action == 'convert'"/>
+                            <button special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
