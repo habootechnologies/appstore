@@ -4,13 +4,15 @@
     'icon': 'static/description/icon.png',
 
     'summary': """
-        Click-to-call, call logging, and telephony features in Odoo via
-        Tata SmartFlo""",
+        Click-to-call and call logging in Odoo CRM via Tata SmartFlo
+        cloud telephony""",
 
     'description': """
-        Tata SmartFlo Integration connects Odoo with Tata SmartFlo to
-        enable click-to-call, call logging, and telephony features within
-        Odoo CRM.
+        Tata SmartFlo Integration connects Odoo CRM with Tata SmartFlo
+        cloud telephony, enabling click-to-call dialing directly from any
+        CRM lead and automatically syncing call detail records (CDR)
+        back into Odoo. Track call duration, direction, and outcome
+        without leaving your CRM.
     """,
 
     'author': "Haboo Technologies Pvt Ltd",

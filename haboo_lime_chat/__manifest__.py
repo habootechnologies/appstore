@@ -3,13 +3,14 @@
     'name': "Lime Chat Integration",
 
     'summary': """
-        Manage LimeChat chatbot conversations and customer support
-        interactions from Odoo""",
+        Manage LimeChat chatbot and customer support conversations from
+        Odoo CRM""",
 
     'description': """
-        Lime Chat Integration connects Odoo with LimeChat to manage
-        chatbot conversations and customer support interactions directly
-        from Odoo CRM.
+        Lime Chat Integration connects Odoo with LimeChat, syncing
+        chatbot and customer support conversations into Odoo CRM. Convert
+        any LimeChat conversation into a CRM opportunity in one click,
+        with full conversation history and role-based access control.
     """,
 
     'author': "Haboo Technologies Pvt Ltd",

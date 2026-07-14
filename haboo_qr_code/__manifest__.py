@@ -1,11 +1,16 @@
 {
     'name': 'QR Code Generator and Scanner',
-    'summary': """QR Code Generator and Scanner""",
-    'description': """QR Code Generator and Scanner""",
+    'summary': """Generate and scan QR codes for Odoo products, with barcode-style scanning support""",
+    'description': """
+        QR Code Generator and Scanner for Odoo creates a unique QR code
+        for every product and lets your team scan them directly from a
+        browser camera or handheld scanner. Speed up inventory lookups,
+        stock checks, and product identification with QR codes generated
+        natively inside Odoo.
+    """,
     'author': 'Haboo Technologies Pvt Ltd',
     'version': '16.0',
     'category': 'Inventory',
-    'summary': 'Generate and Scan QR codes for Products',
     'depends': ['base', 'product'],
     'data': [
         'security/ir.model.access.csv',

@@ -1,11 +1,13 @@
 {
     "name": "Facebook & Instagram Integration",
     "version": "16.0.1.0.0",
-    "summary": """Capture leads and manage Facebook & Instagram social interactions from Odoo""",
+    "summary": """Facebook & Instagram Lead Ads, comments and post integration for Odoo CRM""",
     "description": """
-        Facebook & Instagram Integration captures leads and manages
-        Facebook and Instagram social-media interactions directly within
-        Odoo CRM.
+        Facebook & Instagram Integration for Odoo connects Facebook Lead
+        Ads, Page comments, and Instagram Business post interactions
+        directly to Odoo CRM. Capture leads automatically, convert social
+        interactions into opportunities, and manage all Facebook and
+        Instagram engagement without leaving Odoo.
     """,
     "author": "Haboo Technologies Pvt Ltd",
     "website": "https://www.habootechnologies.com",
