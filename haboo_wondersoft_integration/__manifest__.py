@@ -2,13 +2,14 @@
     'name': "Wondersoft Integration",
 
     'summary': """
-        Synchronize products, customers, inventory, and transactions
-        between Odoo and Wondersoft ERP/POS""",
+        Sync products, customers, inventory and transactions between
+        Odoo and Wondersoft ERP/POS""",
 
     'description': """
         Wondersoft Integration synchronizes products, customers,
         inventory, and transaction data between Odoo and the Wondersoft
-        ERP/POS system.
+        ERP/POS system on a scheduled basis, keeping both systems
+        aligned without manual data entry.
     """,
 
     'author': "Technologies Pvt Ltd",

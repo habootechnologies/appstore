@@ -3,8 +3,8 @@
     'name': "Tata WhatsApp Integration",
 
     'summary': """
-        Send, receive, and manage Tata Tele Business WhatsApp conversations
-        directly from Odoo, with support for two WhatsApp lines/numbers.""",
+        Tata Tele Business WhatsApp Cloud API integration for Odoo CRM,
+        with dual WhatsApp line support.""",
 
     'description': """
         Tata WhatsApp Integration connects Odoo CRM with the Tata Tele
