@@ -8,8 +8,10 @@
         Qikberry""",
 
     'description': """
-        Qikberry Integration connects Odoo with the Qikberry platform
-        to exchange business data and automate related workflows.
+        Qikberry Integration connects Odoo with the Qikberry platform,
+        exchanging business data and automating the workflows around it.
+        Convert Qikberry interactions into CRM opportunities and keep
+        both systems synchronized without manual data entry.
     """,
 
     'author': "Technologies Pvt Ltd",
