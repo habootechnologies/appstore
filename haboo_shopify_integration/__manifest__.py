@@ -2,13 +2,15 @@
     'name': "Shopify Integration",
 
     'summary': """
-        Synchronize products, customers, orders, inventory, and fulfillment
-        between Shopify and Odoo""",
+        Sync Shopify products, orders, customers and inventory with
+        Odoo, plus abandoned checkout recovery""",
 
     'description': """
         Shopify Integration synchronizes products, customers, orders,
-        inventory, and fulfillment information between Shopify and Odoo,
-        including abandoned checkout recovery via CRM.
+        inventory, and fulfillment between Shopify and Odoo on a
+        scheduled basis. Abandoned Shopify checkouts sync into Odoo CRM
+        as opportunities, giving your sales team a real shot at
+        recovering lost sales.
     """,
 
     'author': "Technologies Pvt Ltd",
