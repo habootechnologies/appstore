@@ -1,20 +1,20 @@
 {
-    'name': "Haboo Wondersoft Integration",
+    'name': "Wondersoft Integration",
 
     'summary': """
         Synchronize products, customers, inventory, and transactions
         between Odoo and Wondersoft ERP/POS""",
 
     'description': """
-        Haboo Wondersoft Integration synchronizes products, customers,
+        Wondersoft Integration synchronizes products, customers,
         inventory, and transaction data between Odoo and the Wondersoft
         ERP/POS system.
     """,
 
-    'author': "Haboo Technologies Pvt Ltd",
+    'author': "Technologies Pvt Ltd",
     'website': "https://www.habootechnologies.com",
-    'company': "Haboo Technologies Pvt Ltd",
-    'maintainer': "Haboo Technologies Pvt Ltd",
+    'company': "Technologies Pvt Ltd",
+    'maintainer': "Technologies Pvt Ltd",
     'license': 'OPL-1',
     'price': '1',
     'currency': 'USD',
