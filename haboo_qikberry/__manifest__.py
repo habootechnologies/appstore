@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Haboo Qikberry Integration",
-    'icon': 'static/description/logo.png',
+    'name': "Qikberry Integration",
+    'icon': 'static/description/icon.png',
 
     'summary': """
         Exchange business data and automate workflows between Odoo and
         Qikberry""",
 
     'description': """
-        Haboo Qikberry Integration connects Odoo with the Qikberry platform
+        Qikberry Integration connects Odoo with the Qikberry platform
         to exchange business data and automate related workflows.
     """,
 
@@ -36,4 +36,5 @@
         'views/qikberry_message.xml',
         'wizard/opport_convert.xml',
     ],
+    'images': ['static/description/banner.png'],
 }

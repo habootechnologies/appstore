@@ -1,8 +1,8 @@
 {
-    'name': 'Haboo Google Places & Reviews Integration',
+    'name': 'Google Places & Reviews Integration',
     'summary': """Fetch and sync Google Business reviews and place details into Odoo""",
     'description': """
-        Haboo Google Places & Reviews Integration connects Odoo with the
+        Google Places & Reviews Integration connects Odoo with the
         Google Places API to automatically retrieve and populate business
         and location information, including Google Reviews, inside Odoo.
     """,

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Haboo Lime Chat Integration",
+    'name': "Lime Chat Integration",
 
     'summary': """
         Manage LimeChat chatbot conversations and customer support
         interactions from Odoo""",
 
     'description': """
-        Haboo Lime Chat Integration connects Odoo with LimeChat to manage
+        Lime Chat Integration connects Odoo with LimeChat to manage
         chatbot conversations and customer support interactions directly
         from Odoo CRM.
     """,

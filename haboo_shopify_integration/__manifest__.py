@@ -1,12 +1,12 @@
 {
-    'name': "Haboo Shopify Integration",
+    'name': "Shopify Integration",
 
     'summary': """
         Synchronize products, customers, orders, inventory, and fulfillment
         between Shopify and Odoo""",
 
     'description': """
-        Haboo Shopify Integration synchronizes products, customers, orders,
+        Shopify Integration synchronizes products, customers, orders,
         inventory, and fulfillment information between Shopify and Odoo,
         including abandoned checkout recovery via CRM.
     """,

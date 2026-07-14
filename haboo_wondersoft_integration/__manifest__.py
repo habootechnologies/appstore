@@ -1,12 +1,12 @@
 {
-    'name': "Haboo Wondersoft Integration",
+    'name': "Wondersoft Integration",
 
     'summary': """
         Synchronize products, customers, inventory, and transactions
         between Odoo and Wondersoft ERP/POS""",
 
     'description': """
-        Haboo Wondersoft Integration synchronizes products, customers,
+        Wondersoft Integration synchronizes products, customers,
         inventory, and transaction data between Odoo and the Wondersoft
         ERP/POS system.
     """,

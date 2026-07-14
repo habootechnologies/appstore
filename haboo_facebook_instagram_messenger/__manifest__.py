@@ -1,10 +1,10 @@
 {
-    "name": "Haboo Facebook & Instagram Messenger Integration",
+    "name": "Facebook & Instagram Messenger Integration",
     "version": "19.0.1.0.0",
     "summary": """Bidirectional Facebook Messenger and Instagram Messaging integration
         for Odoo, built on the Facebook/Instagram Graph API by Meta""",
     "description": """
-        Haboo Facebook & Instagram Messenger Integration connects Odoo Discuss
+        Facebook & Instagram Messenger Integration connects Odoo Discuss
         with the Facebook/Instagram Graph API by Meta, allowing users to send
         and receive Facebook Messenger and Instagram DMs directly from Odoo,
         with full conversation history against contacts and leads.

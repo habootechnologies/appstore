@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Haboo Tata SmartFlo Integration",
+    'name': "Tata SmartFlo Integration",
     'icon': 'static/description/icon.png',
 
     'summary': """
@@ -8,7 +8,7 @@
         Tata SmartFlo""",
 
     'description': """
-        Haboo Tata SmartFlo Integration connects Odoo with Tata SmartFlo to
+        Tata SmartFlo Integration connects Odoo with Tata SmartFlo to
         enable click-to-call, call logging, and telephony features within
         Odoo CRM.
     """,
@@ -41,4 +41,5 @@
         'wizard/opportunity_wizard.xml',
         # 'wizard/pop_up_wizard.xml',
     ],
+    'images': ['static/description/banner.png'],
 }
