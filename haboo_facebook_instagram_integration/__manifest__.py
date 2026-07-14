@@ -1,16 +1,16 @@
 {
-    "name": "Haboo Facebook & Instagram Integration",
+    "name": "Facebook & Instagram Integration",
     "version": "19.0.1.0.0",
     "summary": """Capture leads and manage Facebook & Instagram social interactions from Odoo""",
     "description": """
-        Haboo Facebook & Instagram Integration captures leads and manages
+        Facebook & Instagram Integration captures leads and manages
         Facebook and Instagram social-media interactions directly within
         Odoo CRM.
     """,
-    "author": "Haboo Technologies Pvt Ltd",
+    "author": "Technologies Pvt Ltd",
     "website": "https://www.habootechnologies.com",
-    "company": "Haboo Technologies Pvt Ltd",
-    "maintainer": "Haboo Technologies Pvt Ltd",
+    "company": "Technologies Pvt Ltd",
+    "maintainer": "Technologies Pvt Ltd",
     "license": "OPL-1",
     "price": 1,
     "support": "habootechnologies@gmail.com",

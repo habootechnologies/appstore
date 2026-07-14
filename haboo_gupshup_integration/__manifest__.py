@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Haboo Gupshup WhatsApp Integration",
+    'name': "Gupshup WhatsApp Integration",
 
     'summary': """
         Send, receive, and manage WhatsApp messages from Odoo via the
         Gupshup WhatsApp Business API""",
 
     'description': """
-        Haboo Gupshup WhatsApp Integration connects Odoo with the Gupshup
+        Gupshup WhatsApp Integration connects Odoo with the Gupshup
         WhatsApp Business API, letting your team send, receive, and manage
         WhatsApp conversations directly from Odoo.
     """,
 
-    'author': "Haboo Technologies Pvt Ltd",
+    'author': "Technologies Pvt Ltd",
     'website': "https://www.habootechnologies.com",
-    'company': "Haboo Technologies Pvt Ltd",
-    'maintainer': "Haboo Technologies Pvt Ltd",
+    'company': "Technologies Pvt Ltd",
+    'maintainer': "Technologies Pvt Ltd",
     'license': 'OPL-1',
     'price': '1',
     'currency': 'USD',
