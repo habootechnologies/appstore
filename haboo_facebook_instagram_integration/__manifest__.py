@@ -1,6 +1,6 @@
 {
     "name": "Facebook & Instagram Integration",
-    "version": "19.0.1.0.0",
+    "version": "16.0.1.0.0",
     "summary": """Capture leads and manage Facebook & Instagram social interactions from Odoo""",
     "description": """
         Facebook & Instagram Integration captures leads and manages
