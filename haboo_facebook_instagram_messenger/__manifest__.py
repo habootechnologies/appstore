@@ -1,6 +1,6 @@
 {
     "name": "Facebook & Instagram Messenger Integration",
-    "version": "19.0.1.0.0",
+    "version": "17.0.1.0.0",
     "summary": """Bidirectional Facebook Messenger and Instagram Messaging integration
         for Odoo, built on the Facebook/Instagram Graph API by Meta""",
     "description": """
