@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Haboo Tata WhatsApp Integration",
+    'name': "Tata WhatsApp Integration",
 
     'summary': """
         Send, receive, and manage Tata Tele Business WhatsApp conversations
         directly from Odoo, with support for two WhatsApp lines/numbers.""",
 
     'description': """
-        Haboo Tata WhatsApp Integration connects Odoo CRM with the Tata Tele
+        Tata WhatsApp Integration connects Odoo CRM with the Tata Tele
         Business WhatsApp Cloud API, letting your team send and receive
         WhatsApp messages, auto-create/convert CRM opportunities from
         conversations, and track session SLAs from within Odoo. Supports a
@@ -15,10 +15,10 @@
         one.
     """,
 
-    'author': "Haboo Technologies Pvt Ltd",
+    'author': "Technologies Pvt Ltd",
     'website': "https://www.habootechnologies.com",
-    'company': "Haboo Technologies Pvt Ltd",
-    'maintainer': "Haboo Technologies Pvt Ltd",
+    'company': "Technologies Pvt Ltd",
+    'maintainer': "Technologies Pvt Ltd",
 
     'category': 'Sales/CRM',
     'version': '19.0.1.0.0',
