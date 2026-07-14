@@ -3,13 +3,15 @@
     'name': "Gupshup WhatsApp Integration",
 
     'summary': """
-        Send, receive, and manage WhatsApp messages from Odoo via the
-        Gupshup WhatsApp Business API""",
+        Send and receive WhatsApp messages in Odoo via the Gupshup
+        WhatsApp Business API""",
 
     'description': """
         Gupshup WhatsApp Integration connects Odoo with the Gupshup
         WhatsApp Business API, letting your team send, receive, and manage
-        WhatsApp conversations directly from Odoo.
+        WhatsApp Business conversations directly from Odoo CRM. Full
+        message history, a built-in reply wizard, and CRM lead linkage for
+        every WhatsApp conversation.
     """,
 
     'author': "Technologies Pvt Ltd",
